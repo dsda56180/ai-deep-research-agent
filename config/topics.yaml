@@ -76,3 +76,19 @@ topics:
   - swarm intelligence
   last_research: null
   name: 多智能体协作系统
+- channels:
+  - ima
+  - feishu
+  - obsidian
+  created_at: '2026-04-07T12:12:06.119824'
+  enabled: true
+  frequency: weekly
+  id: agent-token优化
+  keywords:
+  - token optimization
+  - LLM context compression
+  - prompt compression
+  - context window management
+  - harness agent efficiency
+  last_research: null
+  name: Agent Token优化
