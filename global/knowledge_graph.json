@@ -1,0 +1,29 @@
+{
+  "updated": "2026-04-07T12:06:30.803260",
+  "topics": [
+    {
+      "id": "ai-agent-memory",
+      "name": "ai-agent-memory",
+      "concept_count": 28,
+      "relation_count": 29,
+      "paper_count": 16,
+      "last_updated": "2026-04-07T10:40:28.424594"
+    },
+    {
+      "id": "多智能体协作系统",
+      "name": "多智能体协作系统",
+      "concept_count": 0,
+      "relation_count": 0,
+      "paper_count": 0,
+      "last_updated": "2026-04-07T12:04:44.615382"
+    }
+  ],
+  "global_concepts": [],
+  "cross_topic_relations": [],
+  "statistics": {
+    "total_topics": 2,
+    "total_concepts": 28,
+    "total_relations": 29,
+    "shared_concepts": 0
+  }
+}

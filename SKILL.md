@@ -1,208 +1,324 @@
 ---
 name: ai-deep-research-agent
-version: 3.0
+version: 4.0
 slug: ai-deep-research-agent
 description: |
-  深度研究 Agent v3.0 — 自我进化版
+  深度研究 Agent v4.0 — 多题材自我进化版
   
-  结合 self-improving-agent 的自学习能力，实现：
-  - 论文搜索与抓取
-  - 深度分析与报告生成
-  - 知识图谱自动进化
-  - 研究方法论持续完善
-  - 知识缺口动态追踪
-  - IMA知识库自动同步
-  - 自我反思与持续改进
+  核心能力：
+  - 多题材独立研究（每个题材独立文件夹）
+  - 全局知识图谱（关联所有题材）
+  - 飞书/Obsidian/IMA 多渠道同步
+  - 继承 self-improving-agent 的自学习机制
   
-  触发词：「深度研究」「研究进度」「知识图谱」「方法论」「知识缺口」「学习」
+  触发词：
+  - 「深度研究 [题材]」- 创建/研究题材
+  - 「研究进度 [题材]」- 查看进度
+  - 「知识图谱」- 全局/题材图谱
+  - 「题材列表」- 所有题材
+  - 「同步到飞书/Obsidian」
 metadata:
   openclaw:
     emoji: "🔬"
     requires:
       skills: ["self-improving"]
     configPaths: ["~/.ai-research/"]
+    channels:
+      - ima
+      - feishu
+      - obsidian
   security:
     credentials_usage: |
-      使用 ima-skill 的 get-token.ps1 获取 IMA 凭证
+      飞书：使用 feishu-skill 的凭证
+      Obsidian：使用本地 vault 路径
+      IMA：使用 ima-skill 的凭证
 ---
-# AI Deep Research Agent — 自我进化版
+# AI Deep Research Agent v4.0 — 多题材自我进化版
 
-## 核心能力
+## 🆕 v4.0 新特性
 
-### 研究系统
-```
-搜索 → 筛选 → 分析 → 进化 → 反思 → 同步
-```
+### 1. 多题材管理
+- 每个研究题材独立文件夹
+- 题材间知识隔离，全局知识图谱关联
+- 支持创建、切换、合并题材
 
-### 自进化机制（继承 self-improving-agent）
-
-**学习信号** → 自动记录：
-- 用户纠正："这个分析方法不对..."
-- 成功模式："这个框架分析效果很好"
-- 失败模式："关键词组合没有找到相关论文"
-- 自我发现："下次应该先分析方法论再搜索"
-
-**分层存储**：
-| 层级 | 位置 | 内容 |
+### 2. 多渠道同步
+| 渠道 | 格式 | 说明 |
 |------|------|------|
-| HOT | `.learnings/memory.md` | 当前最佳实践 |
-| WARM | `.learnings/methods/` | 研究方法论库 |
-| WARM | `.learnings/patterns/` | 成功模式库 |
-| COLD | `.learnings/archive/` | 过时方法 |
+| IMA | Markdown | 微信知识库 |
+| 飞书 | Docx | 云文档协作 |
+| Obsidian | Markdown | 本地知识库 |
 
-## 使用方式
+### 3. 全局知识图谱
+- 自动提取各题材核心概念
+- 发现跨题材关联（如"Agent记忆"与"多智能体协调"）
+- 生成跨题材洞察报告
 
-### 基础研究
-```
-深度研究 AI Agent 记忆系统
-```
+---
 
-### 查看学习进度
-```
-研究学习方法
-```
-
-### 查看最佳实践
-```
-研究最佳实践
-```
-
-### 重置学习（谨慎）
-```
-重置研究学习方法
-```
-
-## 自进化流程
-
-```
-每天 10:00 自动执行
-        ↓
-搜索论文（使用已学习方法）
-        ↓
-发现新论文
-        ↓
-分析论文
-        ↓
-自我反思：
-  - 搜索策略是否有效？
-  - 分析框架是否完整？
-  - 有没有遗漏的信息？
-        ↓
-记录学习：
-  - 成功：记录为最佳实践
-  - 失败：记录为待改进
-        ↓
-更新知识图谱
-        ↓
-同步到 IMA
-        ↓
-晋升/降级学习方法
-```
-
-## 学习记录示例
-
-### memory.md（HOT）
-```markdown
-# 研究最佳实践（自动更新）
-
-## 搜索策略
-- 先用广泛关键词搜索，再用精确关键词筛选
-- 同时搜索 arXiv 和 Google Scholar
-- 检查引用关系找到核心论文
-
-## 分析框架
-- 必须包含：方法、创新、实验、局限
-- 对比至少 2 个基准方法
-- 提取可复现代码片段
-
-## 避免模式（来自失败）
-- 不要只看摘要就下结论
-- 不要忽略论文的 limitations 章节
-```
-
-### corrections.md
-```markdown
-# 研究纠正记录
-
-## 2026-04-07
-CONTEXT: 分析 Zep 论文
-REFLECTION: 只看了摘要，没有抓取全文，遗漏了关键实验细节
-LESSON: 必须抓取论文全文进行深度分析
-
-## 2026-04-07
-CONTEXT: 搜索 "memory agent"
-REFLECTION: 关键词太宽泛，找到 1000+ 篇无关论文
-LESSON: 使用更精确的组合关键词，如 "agent memory architecture LLM"
-```
-
-## 学习晋升规则
-
-| 模式 | 晋升条件 | 存储位置 |
-|------|----------|----------|
-| 成功的研究方法 | 使用 3 次 + 效果好 | memory.md (HOT) |
-| 项目特定方法 | 项目内重复使用 | .learnings/projects/ |
-| 过时的方法 | 30 天未使用 | archive/ |
-
-## 常见陷阱
-
-| 陷阱 | 问题 | 正确做法 |
-|------|------|----------|
-| 学习太快 | 从单次经验过度推广 | 等 3 次验证再确认 |
-| 不学失败 | 只记录成功，忽略失败 | 失败是重要学习信号 |
-| 不反思 | 完成任务不评估质量 | 每次完成后自评 |
-| 存储混乱 | 不分层，全放 HOT | 遵循 HOT/WARM/COLD |
-
-## 与 self-improving-agent 的集成
-
-本 skill 继承 `self-improving` skill 的自学习机制：
-
-1. **共享学习目录**：`~/.self-improving/` 和 `~/.ai-research/`
-2. **统一晋升规则**：相同的 3 次验证机制
-3. **跨域学习**：研究方法可被 self-improving 的其他 skill 复用
-4. **心跳维护**：在 heartbeat 中检查学习方法有效性
-
-## CLI 命令
-
-```bash
-# 执行完整进化流程
-python evolution.py evolve --topic "AI Agent 记忆系统"
-
-# 查看学习方法
-python evolution.py learn --show
-
-# 记录新的学习方法
-python evolution.py learn --add "新方法描述"
-
-# 查看纠正记录
-python evolution.py corrections
-
-# 查看知识图谱摘要
-python evolution.py graph --topic "AI Agent 记忆系统" --summary
-
-# 晋升/降级学习方法
-python evolution.py promote --pattern "搜索策略X"
-python evolution.py demote --pattern "过时方法Y"
-```
-
-## 文件结构
+## 📁 文件结构
 
 ```
 ai-deep-research-agent/
 ├── SKILL.md                           # 本文件
+├── config/
+│   ├── topics.yaml                    # 题材配置
+│   └── channels.yaml                  # 渠道配置
 ├── scripts/
 │   ├── evolution.py                   # 主进化脚本
+│   ├── topic_manager.py               # 题材管理器
+│   ├── global_graph.py                # 全局知识图谱
 │   ├── self_learning.py               # 自学习模块
 │   ├── knowledge_evolution_v2.py      # 知识进化
-│   └── ima_knowledge_solidifier.py    # IMA同步
-├── .learnings/
-│   ├── memory.md                      # HOT: 最佳实践
-│   ├── corrections.md                 # 纠正记录
-│   ├── methods/                       # WARM: 研究方法论
-│   ├── patterns/                      # WARM: 成功模式
-│   └── archive/                       # COLD: 过时方法
-├── knowledge/
-│   ├── graphs/                        # 知识图谱
-│   └── reports/                       # 研究报告
-└── config/
-    └── topics.yaml                    # 研究主题配置
+│   ├── ima_sync.py                    # IMA 同步
+│   ├── feishu_sync.py                 # 飞书同步
+│   └── obsidian_sync.py               # Obsidian 同步
+├── topics/                            # 各题材独立文件夹
+│   ├── ai-agent-memory/               # 题材：AI Agent 记忆系统
+│   │   ├── knowledge/
+│   │   │   ├── graphs/               # 题材知识图谱
+│   │   │   └── reports/              # 研究报告
+│   │   └── .learnings/               # 题材学习方法
+│   ├── multi-agent/                   # 题材：多智能体协作
+│   └── llm-optimization/              # 题材：LLM 优化
+├── global/                            # 全局知识
+│   ├── knowledge_graph.json          # 全局知识图谱
+│   ├── cross_topic_insights.md      # 跨题材洞察
+│   └── concept_index.json            # 概念索引
+├── .learnings/                        # 全局学习方法（HOT）
+│   ├── memory.md
+│   ├── corrections.md
+│   └── methods/
+└── exports/                           # 导出文件夹
+    ├── feishu/
+    └── obsidian/
 ```
+
+---
+
+## 🚀 使用方式
+
+### 创建新题材
+```
+深度研究 AI Agent 记忆系统
+深度研究 多智能体协作系统
+```
+
+### 查看题材列表
+```
+题材列表
+```
+
+### 查看题材进度
+```
+研究进度 AI Agent 记忆系统
+```
+
+### 查看知识图谱
+```
+知识图谱                        # 全局图谱
+知识图谱 AI Agent 记忆系统      # 特定题材图谱
+```
+
+### 同步到飞书/Obsidian
+```
+同步到飞书
+同步到 Obsidian
+同步所有题材到飞书
+```
+
+---
+
+## 🔄 每日进化流程
+
+```
+每天 10:00 自动执行
+        ↓
+【步骤 1】遍历所有启用的题材
+        ↓
+【步骤 2】对每个题材：
+   ├─ 加载学习方法
+   ├─ 搜索论文
+   ├─ 深度分析
+   ├─ 更新题材知识图谱
+   └─ 记录学习
+        ↓
+【步骤 3】更新全局知识图谱
+   ├─ 提取核心概念
+   ├─ 发现跨题材关联
+   └─ 生成跨题材洞察
+        ↓
+【步骤 4】多渠道同步
+   ├─ IMA：所有题材报告
+   ├─ 飞书：汇总文档
+   └─ Obsidian：本地 vault
+        ↓
+【步骤 5】学习方法晋升/降级
+```
+
+---
+
+## 📊 题材配置
+
+### config/topics.yaml
+
+```yaml
+topics:
+  - id: ai-agent-memory
+    name: AI Agent 记忆系统
+    keywords:
+      - "AI agent memory architecture"
+      - "MemGPT Mem0 Zep"
+      - "vector memory RAG"
+    enabled: true
+    frequency: daily
+    channels:
+      - ima
+      - feishu
+      - obsidian
+    
+  - id: multi-agent
+    name: 多智能体协作
+    keywords:
+      - "multi-agent coordination"
+      - "agent communication protocol"
+    enabled: true
+    frequency: weekly
+    channels:
+      - feishu
+
+channels:
+  ima:
+    enabled: true
+    kb_id: "eImkUmYly1k-NH7Pz8e4syn4zs0UXJZufvCX5CSKvN8="
+  
+  feishu:
+    enabled: true
+    app_id: "${FEISHU_APP_ID}"
+    app_secret: "${FEISHU_APP_SECRET}"
+    folder_token: "fldcnXXXXXXXXXX"
+  
+  obsidian:
+    enabled: true
+    vault_path: "D:/Obsidian/MyVault"
+    folder: "AI Research"
+```
+
+---
+
+## 🧠 全局知识图谱
+
+### 结构
+
+```json
+{
+  "topics": [
+    {
+      "id": "ai-agent-memory",
+      "name": "AI Agent 记忆系统",
+      "concept_count": 28,
+      "relation_count": 29,
+      "last_updated": "2026-04-07"
+    }
+  ],
+  "global_concepts": [
+    {
+      "id": "memory-architecture",
+      "name": "记忆架构",
+      "appears_in": ["ai-agent-memory", "multi-agent"],
+      "definitions": {
+        "ai-agent-memory": "LLM 的上下文管理机制",
+        "multi-agent": "Agent 间状态共享方式"
+      }
+    }
+  ],
+  "cross_topic_relations": [
+    {
+      "from_topic": "ai-agent-memory",
+      "from_concept": "MemGPT",
+      "to_topic": "multi-agent",
+      "to_concept": "agent-state-sharing",
+      "relation": "enables",
+      "insight": "MemGPT 的记忆管理可用于多 Agent 状态同步"
+    }
+  ]
+}
+```
+
+---
+
+## 🔌 渠道同步
+
+### 飞书同步
+- 自动创建云文档
+- 支持文件夹结构
+- 汇总报告自动生成
+
+### Obsidian 同步
+- 导出为 Markdown
+- 保留双向链接
+- 支持 Obsidian Graph View
+
+### IMA 同步
+- 研究报告固化
+- 知识图谱更新
+- 学习方法同步
+
+---
+
+## 📖 命令行接口
+
+```bash
+# 题材管理
+python topic_manager.py list
+python topic_manager.py create "AI Agent 记忆系统"
+python topic_manager.py disable "ai-agent-memory"
+python topic_manager.py merge "topic1" "topic2" --into "merged-topic"
+
+# 进化执行
+python evolution.py evolve --all
+python evolution.py evolve --topic "ai-agent-memory"
+
+# 知识图谱
+python global_graph.py build
+python global_graph.py insights
+python global_graph.py export --format markdown
+
+# 渠道同步
+python feishu_sync.py sync --topic "ai-agent-memory"
+python obsidian_sync.py sync --all
+python ima_sync.py sync --topic "ai-agent-memory"
+```
+
+---
+
+## 🎯 最佳实践
+
+### 题材命名
+- 使用清晰、唯一的名称
+- 避免过于宽泛（"AI"、"机器学习"）
+- 推荐：具体领域 + 核心问题
+
+### 频率设置
+| 题材类型 | 推荐频率 |
+|----------|----------|
+| 活跃研究 | daily |
+| 稳定跟踪 | weekly |
+| 兴趣探索 | monthly |
+
+### 渠道选择
+| 用途 | 推荐渠道 |
+|------|----------|
+| 个人知识库 | Obsidian |
+| 团队协作 | 飞书 |
+| 移动查看 | IMA |
+
+---
+
+## ⚠️ 注意事项
+
+1. 题材隔离：各题材知识图谱独立，避免概念混淆
+2. 定期合并：相似题材考虑合并，减少重复
+3. 全局视角：定期查看全局图谱，发现跨题材关联
+4. 渠道同步：确保各渠道凭证正确配置
+5. 学习继承：全局学习方法对所有题材生效

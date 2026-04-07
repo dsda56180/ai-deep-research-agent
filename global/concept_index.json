@@ -1,0 +1,257 @@
+{
+  "updated": "2026-04-07T12:06:30.804232",
+  "concepts": [
+    {
+      "id": "mem0",
+      "name": "Mem0",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "memgpt",
+      "name": "MemGPT",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "letta",
+      "name": "Letta",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "langchain-memory",
+      "name": "LangChain Memory",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "redis-memory",
+      "name": "Redis Agent Memory",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "episodic-memory",
+      "name": "情景记忆",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "semantic-memory",
+      "name": "语义记忆",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "virtual-context-management",
+      "name": "虚拟上下文管理",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "rag-memory",
+      "name": "RAG 记忆机制",
+      "type": "method",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "tool-augmented-memory",
+      "name": "工具增强记忆",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "hierarchical-memory",
+      "name": "分层记忆系统",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "cma",
+      "name": "Continuum Memory Architecture (CMA)",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "mem0-gen",
+      "name": "Mem0 (Graph Enhanced)",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "memgen",
+      "name": "MemGen (Generative Latent Memory)",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "pamu",
+      "name": "PAMU (Preference-Aware Memory Update)",
+      "type": "method",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "gam-rag",
+      "name": "GAM-RAG (Gain-Adaptive Memory RAG)",
+      "type": "method",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "hmt",
+      "name": "Hierarchical Memory Tree (HMT)",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "multi-agent-memory",
+      "name": "Multi-Agent Memory Architecture",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "structmemeval",
+      "name": "StructMemEval Benchmark",
+      "type": "dataset",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "emembench",
+      "name": "EMemBench Benchmark",
+      "type": "dataset",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "tradable-memory",
+      "name": "Tradable Agent Memory",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "temporal-chaining",
+      "name": "时间链",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "selective-retention",
+      "name": "选择性保留",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "associative-routing",
+      "name": "联想路由",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "zep",
+      "name": "Zep",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "meminsight",
+      "name": "MemInsight",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "graphiti-engine",
+      "name": "Graphiti引擎",
+      "type": "method",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "temporal-knowledge-graph",
+      "name": "时序知识图谱",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    }
+  ]
+}
