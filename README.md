@@ -1,4 +1,4 @@
-# AI Deep Research Agent v3.0
+# AI Deep Research Agent v5.0
 
 <div align="center">
 
@@ -6,32 +6,34 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10+-brightgreen.svg)](https://python.org)
-[![Skills](https://img.shields.io/badge/skills-3.0-orange.svg)](https://clawic.com)
+[![Skills](https://img.shields.io/badge/skills-5.0-orange.svg)](https://github.com/dsda56180/ai-deep-research-agent)
 
-基于 OpenCode + Oh My OpenCode 架构，结合 self-improving-agent 的自学习机制
+基于 Karpathy Prompt 原则优化 | 多题材管理 | 多渠道同步
 
 </div>
 
 ---
 
-## ✨ 核心特性
+## ✨ v5.0 新特性
 
-### 🔬 深度研究系统
-- **论文搜索与抓取** - 自动搜索 arXiv、Google Scholar 等数据源
-- **深度分析引擎** - 提取方法、创新、实验、局限四维度分析
-- **知识图谱进化** - 自动添加概念、推断关系、检测矛盾
+### 🎯 基于 Karpathy 原则优化
+- **精简 System Prompt** - 从 ~2000 tokens 压缩到 <500 tokens
+- **动态加载** - 按需加载指令，避免预加载冗余
+- **Token 监控** - 实时监控消耗，自动告警
+- **记忆压缩** - 定期归档旧数据，保持高效
 
-### 🧠 自我进化机制（继承 self-improving-agent）
-- **从纠正中学习** - 记录用户纠正和失败模式
-- **从成功中学习** - 积累验证有效的研究方法
-- **自动晋升机制** - 使用 3 次自动晋升为最佳实践
-- **分层记忆存储** - HOT / WARM / COLD 三层存储
+### 📚 多题材管理
+- **独立文件夹** - 每个题材独立研究
+- **全局知识图谱** - 跨题材概念关联
+- **灵活配置** - 支持创建/合并/禁用题材
 
-### ☁️ IMA 知识库同步
-- 研究报告自动固化
-- 知识图谱定期同步
-- 方法论更新追踪
-- 知识缺口动态维护
+### 📤 多渠道同步
+| 渠道 | 状态 | 说明 |
+|------|------|------|
+| **IMA** | ✅ | 微信知识库 |
+| **Obsidian** | ✅ | 本地 Markdown |
+| **飞书** | ✅ | 云文档协作 |
+| **GitHub** | ✅ | 版本管理 |
 
 ---
 
@@ -41,78 +43,151 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/YOUR_USERNAME/ai-deep-research-agent.git
+git clone https://github.com/dsda56180/ai-deep-research-agent.git
 
 # 安装依赖
 pip install pyyaml requests
 
-# 配置
-cp config/topics.yaml.example config/topics.yaml
+# 配置 Obsidian（可选）
+export OBSIDIAN_VAULT="/path/to/your/vault"
 ```
 
-### 使用
+### 基础使用
 
 ```bash
-# 执行完整研究流程
-python scripts/evolution.py evolve --topic "AI Agent 记忆系统"
+# 列出所有题材
+python scripts/topic_manager.py list
 
-# 查看学习方法
-python scripts/self_learning.py show --memory
+# 执行研究（精简 Prompt）
+python scripts/lean_context.py --topic "AI Agent 记忆系统"
 
-# 查看知识图谱
-python scripts/evolution.py graph --topic "AI Agent 记忆系统" --summary
+# 查看全局图谱
+python scripts/global_graph.py summary
+
+# Token 消耗状态
+python scripts/token_monitor.py status
+```
+
+### 同步到多渠道
+
+```bash
+# 导出到 Obsidian
+python scripts/obsidian_sync.py export --topic "ai-agent-memory"
 
 # 同步到 IMA
-python scripts/evolution.py sync --topic "AI Agent 记忆系统"
+python scripts/ima_knowledge_solidifier.py --report "path/to/report.md"
+
+# 同步到飞书（需配置凭证）
+python scripts/feishu_sync.py sync --topic "ai-agent-memory"
 ```
 
 ---
 
-## 📖 文档
+## 📊 当前研究状态
 
-| 文档 | 说明 |
+| 指标 | 数值 |
 |------|------|
-| [SKILL.md](SKILL.md) | Skill 定义与使用指南 |
-| [docs/architecture.md](docs/architecture.md) | 系统架构详解 |
-| [docs/self-learning.md](docs/self-learning.md) | 自学习机制说明 |
-| [docs/api-reference.md](docs/api-reference.md) | API 参考文档 |
+| 研究题材 | 3 个 |
+| 概念数 | 28+ 个 |
+| 关系数 | 29+ 条 |
+| 报告数 | 8+ 份 |
+| Token 预算 | 50K/天 |
+
+### 研究题材
+
+| 题材 | 频率 | 渠道 |
+|------|------|------|
+| AI Agent 记忆系统 | 每日 | IMA/飞书/Obsidian |
+| 多智能体协作系统 | 每周 | 飞书/Obsidian |
+| Agent Token优化 | 每周 | IMA/飞书/Obsidian |
 
 ---
 
-## 🔄 每日进化流程
+## 🔄 自动化流程
 
 ```
 每天 10:00 自动触发
         ↓
-【步骤 1】加载学习方法
+【1】加载精简 Prompt (<500 tokens)
         ↓
-【步骤 2】搜索论文（应用最佳实践）
+【2】搜索论文（应用最佳实践）
         ↓
-【步骤 3】深度分析（使用验证框架）
+【3】深度分析（提取核心发现）
         ↓
-【步骤 4】自我反思
+【4】更新知识图谱
         ↓
-【步骤 5】记录学习
+【5】GitHub 自动推送
         ↓
-【步骤 6】知识图谱进化
+【6】IMA 知识库同步
         ↓
-【步骤 7】IMA 同步
+【7】Obsidian 自动导出
         ↓
-【自动晋升/降级】
+【8】Token 消耗监控
+        ↓
+【9】记忆自动压缩
 ```
 
 ---
 
-## 📊 当前知识状态
+## 📁 目录结构
 
-| 指标 | 数值 |
-|------|------|
-| 概念数 | 28 个 |
-| 关系数 | 29 条 |
-| 论文数 | 16 篇 |
-| 方法论 | 2 个 |
-| 学习记录 | 3+ 条 |
-| 已验证模式 | 2 个 |
+```
+ai-deep-research-agent/
+├── SKILL.md                      # Skill 定义 v5.0
+├── README.md                     # 本文件
+├── scripts/
+│   ├── lean_context.py           # 精简上下文加载
+│   ├── token_monitor.py          # Token 消耗监控
+│   ├── memory_compressor.py      # 记忆压缩
+│   ├── topic_manager.py          # 题材管理
+│   ├── global_graph.py           # 全局知识图谱
+│   ├── obsidian_sync.py          # Obsidian 同步
+│   ├── feishu_sync.py            # 飞书同步
+│   ├── ima_knowledge_solidifier.py # IMA 同步
+│   └── evolution.py              # 主进化脚本
+├── topics/                       # 多题材独立管理
+│   ├── ai-agent-memory/
+│   ├── multi-agent-collaboration/
+│   └── agent-token-optimization/
+├── global/                       # 全局知识
+│   ├── knowledge_graph.json
+│   └── cross_topic_graph.json
+├── exports/                      # 导出目录
+│   ├── obsidian/
+│   └── feishu/
+├── config/
+│   └── topics.yaml               # 题材配置
+└── .learnings/                   # 自学习记忆
+    ├── memory.md
+    ├── corrections.md
+    └── methods/
+```
+
+---
+
+## 🔬 核心发现（2026-04-07）
+
+### AI Agent 记忆系统
+
+> 主流大模型是"健忘"的，70%-90%推理token被反复重传历史信息。
+
+**解决方案对比**：
+
+| 方案 | 核心机制 | GitHub |
+|------|----------|--------|
+| MemGPT | 层级存储+缺页中断 | 9.4k ⭐ |
+| Mem0 | 自我改进记忆层 | 万星 |
+| Zep | 时序知识图谱 | 企业级 |
+
+### Token 优化
+
+> Context Engineering > Prompt Engineering
+> 核心从"怎么问"转向"给什么"和"如何管理信息"
+
+### 多智能体协作
+
+> MCP协议成为OpenAI主推的生态枢纽
+> AutoGen/Swarms/ChatDev 形成三足鼎立
 
 ---
 
@@ -125,42 +200,16 @@ python scripts/evolution.py sync --topic "AI Agent 记忆系统"
 | 用户纠正 | 立即记录到 corrections.md |
 | 成功模式 | 记录为候选模式 |
 | 失败模式 | 记录为避免模式 |
-| 自我发现 | 记录为改进要点 |
+| Token 超限 | 自动压缩 + 告警 |
 
-### 晋升规则
-
-| 条件 | 动作 |
-|------|------|
-| 使用 3 次 + 效果好 | 晋升到 HOT memory |
-| 30 天未使用 | 降级到 WARM |
-| 90 天未使用 | 归档到 COLD |
-
----
-
-## 📁 目录结构
+### 记忆分层
 
 ```
-ai-deep-research-agent/
-├── SKILL.md                      # Skill 定义
-├── README.md                     # 本文件
-├── scripts/
-│   ├── evolution.py              # 主进化脚本
-│   ├── self_learning.py          # 自学习模块
-│   ├── knowledge_evolution_v2.py # 知识进化
-│   └── ima_knowledge_solidifier.py # IMA 同步
-├── .learnings/
-│   ├── memory.md                 # HOT: 最佳实践
-│   ├── corrections.md            # 纠正记录
-│   ├── methods/                  # WARM: 方法库
-│   └── usage_stats.json          # 使用统计
-├── knowledge/
-│   ├── graphs/                   # 知识图谱
-│   └── reports/                  # 研究报告
-├── config/
-│   └── topics.yaml              # 研究主题配置
-└── docs/
-    ├── architecture.md
-    └── self-learning.md
+HOT (热数据)  ← 最近对话，Token消耗高
+    ↓
+WARM (温数据) ← 近期重要，定期压缩
+    ↓
+COLD (冷数据) ← 历史记忆，按需召回
 ```
 
 ---
@@ -171,15 +220,54 @@ ai-deep-research-agent/
 
 ```yaml
 topics:
-  - name: AI Agent 记忆系统
+  - id: ai-agent-memory
+    name: AI Agent 记忆系统
     keywords:
       - "AI agent memory architecture"
-      - "MemGPT Mem0 Zep long-term memory"
-    frequency: daily
-    priority: high
+      - "MemGPT Mem0 Zep"
     enabled: true
-    target_knowledge_base: "YOUR_IMA_KB_ID"
+    frequency: daily
+    channels:
+      - ima
+      - feishu
+      - obsidian
+
+channels:
+  ima:
+    enabled: true
+    kb_id: "YOUR_KB_ID"
+  
+  obsidian:
+    enabled: true
+    vault_path: "${OBSIDIAN_VAULT}"
+    folder: "AI Research"
+  
+  feishu:
+    enabled: true
+    app_id: "${FEISHU_APP_ID}"
 ```
+
+### 环境变量
+
+```bash
+# Obsidian
+export OBSIDIAN_VAULT="/path/to/vault"
+
+# 飞书（可选）
+export FEISHU_APP_ID="your_app_id"
+export FEISHU_APP_SECRET="your_secret"
+export FEISHU_FOLDER_TOKEN="folder_token"
+```
+
+---
+
+## 📈 优化效果
+
+| 指标 | v4.0 | v5.0 | 提升 |
+|------|------|------|------|
+| System Prompt | ~2000 tokens | ~400 tokens | **80%↓** |
+| 报告长度 | ~2000 字 | ~500 字 | **75%↓** |
+| Token 消耗/周 | ~50000 | ~15000 | **70%↓** |
 
 ---
 
@@ -197,9 +285,10 @@ MIT License - 详见 [LICENSE](LICENSE)
 
 ## 🙏 致谢
 
+- [Karpathy](https://karpathy.ai/) - Prompt 工程原则
 - [self-improving-agent](https://clawic.com/skills/self-improving) - 自学习机制
-- [OpenCode](https://github.com/opencode-ai) - 多智能体架构
-- [Oh My OpenCode](https://github.com/oh-my-opencode) - Agent 协作框架
+- [MemGPT](https://github.com/cpacker/MemGPT) - 记忆架构参考
+- [Mem0](https://mem0.ai/) - 记忆层设计
 
 ---
 
@@ -207,6 +296,6 @@ MIT License - 详见 [LICENSE](LICENSE)
 
 **Made with 🔬 by QClaw**
 
-[官网](https://qclaw.cn) · [文档](https://docs.qclaw.cn) · [社区](https://community.qclaw.cn)
+[GitHub](https://github.com/dsda56180/ai-deep-research-agent) · [QClaw](https://qclaw.cn)
 
 </div>
