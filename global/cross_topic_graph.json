@@ -1,0 +1,27 @@
+{
+  "concepts": [
+    {"name": "Agentic RAG", "type": "architecture", "description": "在传统RAG基础上引入Agent机制", "papers": 3},
+    {"name": "Context Engineering", "type": "methodology", "description": "关注如何给模型信息及管理这些信息", "papers": 2},
+    {"name": "Prompt Engineering", "type": "methodology", "description": "关注如何问模型问题", "papers": 2},
+    {"name": "分层记忆", "type": "pattern", "description": "热/温/冷数据分级管理", "papers": 2},
+    {"name": "Token压缩", "type": "technique", "description": "减少推理token消耗", "papers": 3},
+    {"name": "MCP协议", "type": "protocol", "description": "OpenAI主推的模型上下文协议", "papers": 2},
+    {"name": "AutoGen", "type": "framework", "description": "微软多智能体协作框架", "papers": 2},
+    {"name": "Swarms", "type": "framework", "description": "企业级多智能体编排框架", "papers": 1},
+    {"name": "记忆缺失成本", "type": "problem", "description": "70-90%推理token被重复使用", "papers": 1},
+    {"name": "2025 Agent元年", "type": "trend", "description": "IDC预测2025为Agent落地元年", "papers": 1}
+  ],
+  "relations": [
+    {"from": "Context Engineering", "to": "Token压缩", "type": "enables"},
+    {"from": "Agentic RAG", "to": "分层记忆", "type": "implements"},
+    {"from": "MCP协议", "to": "多智能体协作", "type": "enables"},
+    {"from": "AutoGen", "to": "多智能体协作", "type": "implements"},
+    {"from": "记忆缺失成本", "to": "Token压缩", "type": "motivates"}
+  ],
+  "metadata": {
+    "topic": "AI Agent 综合研究",
+    "last_updated": "2026-04-07T15:00:00",
+    "paper_count": 5,
+    "concept_count": 10
+  }
+}
