@@ -1,0 +1,154 @@
+# AI Deep Research Agent 优化配置
+# 包含：质量评估、知识进化、增量更新、跨主题关联等所有优化
+
+topics:
+  - name: AI Agent 记忆系统
+    keywords:
+      - "AI agent memory architecture"
+      - "MemGPT"
+      - "vector memory RAG"
+      - "episodic memory LLM"
+    research_questions:
+      - "如何构建可持续的Agent记忆系统？"
+      - "短期vs长期记忆的技术差异？"
+      - "记忆方案的优劣势对比？"
+    frequency: daily
+    priority: high
+    since: 2026-04-02
+    enabled: true
+    target_knowledge_base: "eImkUmYly1k-NH7Pz8e4syn4zs0UXJZufvCX5CSKvN8="
+
+# =============================================
+# 论文质量评估配置 (P2)
+# =============================================
+
+paper_quality:
+  min_score: 3.0
+  scoring:
+    venue_tier:
+      NeurIPS: 2.0
+      ICML: 2.0
+      ICLR: 2.0
+      ACL: 2.0
+      EMNLP: 2.0
+      CVPR: 2.0
+      AAAI: 1.5
+      IJCAI: 1.5
+      arxiv: 1.0
+    citation_velocity:
+      high: 1.5
+      medium: 1.0
+    freshness:
+      90_days: 1.0
+      180_days: 0.5
+
+# =============================================
+# 知识图谱配置 (P1)
+# =============================================
+
+knowledge_graph:
+  auto_update: true
+  concept_match_threshold: 0.8
+  auto_relation: true
+  concept_types:
+    - system
+    - concept
+    - method
+    - dataset
+    - metric
+  relation_types:
+    - implements
+    - extends
+    - combines
+    - validates
+    - contradicts
+    - supplements
+
+# =============================================
+# 知识进化配置 (P1)
+# =============================================
+
+knowledge_evolution:
+  enabled: true
+  auto_compare: true
+  detect_contradictions: true
+  track_validations: true
+
+# =============================================
+# 增量更新配置 (P3)
+# =============================================
+
+incremental_update:
+  enabled: true
+  frequency_days: 1
+  cache_ttl_days: 7
+  skip_analyzed: true
+
+# =============================================
+# 跨主题关联配置 (P3)
+# =============================================
+
+cross_topic:
+  enabled: true
+  frequency: weekly
+  shared_threshold: 2
+
+# =============================================
+# 研究进度配置 (P3)
+# =============================================
+
+progress_tracking:
+  enabled: true
+  stages:
+    - search
+    - filter
+    - analysis
+    - graph_update
+    - ima_sync
+
+# =============================================
+# 方法复现指南配置 (P2)
+# =============================================
+
+reproduction_guides:
+  auto_generate: true
+  include:
+    - github_url
+    - dependencies
+    - code_snippet
+    - quick_start
+    - dataset_info
+  format: markdown
+
+# =============================================
+# IMA同步配置
+# =============================================
+
+ima_sync:
+  auto_sync: true
+  format: markdown
+  naming_pattern: "{topic} 深度研究 - {date}"
+
+# =============================================
+# 研究配置
+# =============================================
+
+settings:
+  max_papers_per_session: 5
+  paper_sources:
+    - name: arXiv
+      categories: [cs.AI, cs.CL, cs.LG]
+      recent_days: 90
+    - name: Papers with Code
+      min_citations: 10
+    - name: 顶级会议
+      venues: [NeurIPS, ICML, ICLR, ACL, EMNLP]
+  quality_threshold:
+    min_relevance: 0.7
+    min_paper_quality: "peer_reviewed"
+  analysis_depth:
+    core_method: true
+    innovation: true
+    experiments: true
+    limitations: true
+    comparison: true

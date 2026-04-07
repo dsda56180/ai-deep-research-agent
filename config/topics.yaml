@@ -1,0 +1,132 @@
+# AI Deep Research Agent 研究主题配置
+# 每个主题独立进行深度研究、知识图谱构建、IMA 同步
+
+topics:
+  # ============================================
+  # 高优先级：当前深度研究主题
+  # ============================================
+  
+  - name: AI Agent 记忆系统
+    keywords:
+      - "AI agent memory architecture"
+      - "MemGPT long-term memory"
+      - "vector memory RAG agent"
+      - "episodic memory LLM"
+      - "working memory AI agent"
+      - "knowledge graph memory agent"
+      - "Mem0 scalable memory"
+    research_questions:
+      - "如何构建可持续的 Agent 记忆系统？"
+      - "短期记忆 vs 长期记忆的技术实现差异？"
+      - "现有记忆方案的优劣势对比？"
+      - "记忆系统在多轮对话中的核心作用？"
+      - "向量记忆 vs 知识图谱记忆的适用场景？"
+    frequency: daily
+    priority: high
+    since: 2026-04-02
+    enabled: true
+    target_knowledge_base: "eImkUmYly1k-NH7Pz8e4syn4zs0UXJZufvCX5CSKvN8="
+
+  # ============================================
+  # 中优先级：待开启研究主题
+  # ============================================
+  
+  # - name: LLM Agent 架构
+  #   keywords:
+  #     - "LLM agent architecture"
+  #     - "ReAct agent reasoning"
+  #     - "tool use LLM agent"
+  #   research_questions:
+  #     - "主流 Agent 架构对比？"
+  #     - "Reasoning + Acting 的最佳实践？"
+  #   frequency: weekly
+  #   priority: medium
+  #   since: 2026-04-01
+  #   enabled: false
+
+  # - name: 多智能体系统
+  #   keywords:
+  #     - "multi-agent LLM system"
+  #     - "agent collaboration"
+  #     - "multi-agent communication"
+  #   frequency: weekly
+  #   priority: medium
+  #   since: 2026-04-01
+  #   enabled: false
+
+# =============================================
+# 研究配置
+# =============================================
+
+settings:
+  # 每次研究的论文数量限制
+  max_papers_per_session: 5
+  
+  # 论文来源优先级
+  paper_sources:
+    - name: arXiv
+      categories: [cs.AI, cs.CL, cs.LG]
+      recent_days: 90
+    - name: Papers with Code
+      sort: citations
+      min_citations: 10
+    - name: 顶级会议
+      venues: [NeurIPS, ICML, ICLR, ACL, EMNLP]
+  
+  # 内容质量阈值
+  quality_threshold:
+    min_relevance: 0.7
+    min_paper_quality: "peer_reviewed"  # peer_reviewed | arxiv | any
+  
+  # 分析深度
+  analysis_depth:
+    core_method: true      # 核心技术分析
+    innovation: true      # 创新点评估
+    experiments: true     # 实验结果解读
+    limitations: true     # 局限性分析
+    comparison: true       # 与已有工作对比
+
+# =============================================
+# IMA 知识库同步配置
+# =============================================
+
+ima_sync:
+  # 同步策略：每次研究后自动同步
+  auto_sync: true
+  
+  # 文档格式：Markdown
+  format: markdown
+  
+  # 文档命名：[主题] 深度研究 - YYYY-MM-DD
+  naming_pattern: "{topic} 深度研究 - {date}"
+
+# =============================================
+# 知识图谱配置
+# =============================================
+
+knowledge_graph:
+  # 存储格式：JSON
+  format: json
+  
+  # 图谱文件位置
+  storage_path: knowledge/graphs/
+  
+  # 自动更新
+  auto_update: true
+  
+  # 概念类型
+  concept_types:
+    - system      # 系统/框架
+    - concept     # 概念
+    - method      # 方法
+    - dataset     # 数据集
+    - metric      # 指标
+  
+  # 关系类型
+  relation_types:
+    - implements  # 实现
+    - extends     # 扩展
+    - competes    # 竞争
+    - combines    # 结合
+    - validates   # 验证
+    - contradicts # 矛盾
