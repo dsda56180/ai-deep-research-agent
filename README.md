@@ -108,11 +108,11 @@ python scripts/feishu_sync.py sync --topic "ai-agent-memory"
 ```
 每天 10:00 自动触发
         ↓
-【1】加载精简 Prompt (<500 tokens)
+【1】列出研究题材
         ↓
-【2】搜索论文（应用最佳实践）
+【2】加载学习方法
         ↓
-【3】深度分析（提取核心发现）
+【3】搜索论文 + 生成新报告 ← 生成今日报告！
         ↓
 【4】更新知识图谱
         ↓
@@ -120,11 +120,9 @@ python scripts/feishu_sync.py sync --topic "ai-agent-memory"
         ↓
 【6】IMA 知识库同步
         ↓
-【7】Obsidian 自动导出
+【7】Obsidian 增量导出 ← 只同步最新报告！
         ↓
 【8】Token 消耗监控
-        ↓
-【9】记忆自动压缩
 ```
 
 ---
@@ -144,11 +142,13 @@ ai-deep-research-agent/
 │   ├── obsidian_sync.py          # Obsidian 同步
 │   ├── feishu_sync.py            # 飞书同步
 │   ├── ima_knowledge_solidifier.py # IMA 同步
-│   └── evolution.py              # 主进化脚本
+│   ├── evolution.py              # 主进化脚本
+│   └── daily_report_generator.py # 每日报告生成器 ← 新增！
 ├── topics/                       # 多题材独立管理
 │   ├── ai-agent-memory/
-│   ├── multi-agent-collaboration/
-│   └── agent-token-optimization/
+│   │   └── knowledge/
+│   │       ├── reports/         # 研究报告（按日期）
+│   │       └── graphs/          # 知识图谱
 ├── global/                       # 全局知识
 │   ├── knowledge_graph.json
 │   └── cross_topic_graph.json
@@ -162,6 +162,24 @@ ai-deep-research-agent/
     ├── corrections.md
     └── methods/
 ```
+
+---
+
+## 🔧 报告管理
+
+### 最新报告命名
+
+```
+AI_Agent_Memory_Research_YYYY-MM-DD.md
+```
+
+### 报告更新策略
+
+| 场景 | 策略 |
+|------|------|
+| 每日首次运行 | 生成新报告（追加到历史） |
+| 同一天多次运行 | 增量更新现有报告 |
+| 旧报告归档 | 30天后自动压缩 |
 
 ---
 
