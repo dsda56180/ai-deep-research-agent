@@ -1,0 +1,2941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<key id="label" for="node" attr.name="label" attr.type="string"/>
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="layer" for="node" attr.name="layer" attr.type="string"/>
+<key id="community" for="node" attr.name="community" attr.type="string"/>
+<key id="relation" for="edge" attr.name="relation" attr.type="string"/>
+<key id="status" for="edge" attr.name="status" attr.type="string"/>
+<key id="confidence" for="edge" attr.name="confidence" attr.type="double"/>
+<graph id="knowledge" edgedefault="undirected">
+<node id="mem0">
+<data key="label">Mem0</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="memgpt">
+<data key="label">MemGPT</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="letta">
+<data key="label">Letta</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="langchain-memory">
+<data key="label">LangChain Memory</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="redis-memory">
+<data key="label">Redis Agent Memory</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="episodic-memory">
+<data key="label">情景记忆</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="semantic-memory">
+<data key="label">语义记忆</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="virtual-context-management">
+<data key="label">虚拟上下文管理</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="rag-memory">
+<data key="label">RAG 记忆机制</data>
+<data key="type">method</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="tool-augmented-memory">
+<data key="label">工具增强记忆</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="hierarchical-memory">
+<data key="label">分层记忆系统</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="cma">
+<data key="label">Continuum Memory Architecture (CMA)</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="mem0-gen">
+<data key="label">Mem0 (Graph Enhanced)</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="memgen">
+<data key="label">MemGen (Generative Latent Memory)</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="pamu">
+<data key="label">PAMU (Preference-Aware Memory Update)</data>
+<data key="type">method</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="gam-rag">
+<data key="label">GAM-RAG (Gain-Adaptive Memory RAG)</data>
+<data key="type">method</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="hmt">
+<data key="label">Hierarchical Memory Tree (HMT)</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="multi-agent-memory">
+<data key="label">Multi-Agent Memory Architecture</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="structmemeval">
+<data key="label">StructMemEval Benchmark</data>
+<data key="type">dataset</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="emembench">
+<data key="label">EMemBench Benchmark</data>
+<data key="type">dataset</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="tradable-memory">
+<data key="label">Tradable Agent Memory</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="temporal-chaining">
+<data key="label">时间链</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="selective-retention">
+<data key="label">选择性保留</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="associative-routing">
+<data key="label">联想路由</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="zep">
+<data key="label">Zep</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="meminsight">
+<data key="label">MemInsight</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="graphiti-engine">
+<data key="label">Graphiti引擎</data>
+<data key="type">method</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="temporal-knowledge-graph">
+<data key="label">时序知识图谱</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="summary-community-1">
+<data key="label">community-1 Summary</data>
+<data key="type">CommunitySummary</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="summary-community-2">
+<data key="label">community-2 Summary</data>
+<data key="type">CommunitySummary</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="summary-community-3">
+<data key="label">community-3 Summary</data>
+<data key="type">CommunitySummary</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="summary-community-4">
+<data key="label">community-4 Summary</data>
+<data key="type">CommunitySummary</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="summary-community-5">
+<data key="label">community-5 Summary</data>
+<data key="type">CommunitySummary</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="summary-community-6">
+<data key="label">community-6 Summary</data>
+<data key="type">CommunitySummary</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="summary-community-7">
+<data key="label">community-7 Summary</data>
+<data key="type">CommunitySummary</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="document-ai-agent-memory-systems-2026-04-07-md">
+<data key="label">AI_Agent_Memory_Systems_2026-04-07</data>
+<data key="type">Document</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-ai-agent-2026-04-07">
+<data key="label">AI Agent 记忆系统深度研究报告 — 2026-04-07</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item">
+<data key="label">📖 核心论文解读</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-1-memgpt-towards-llms-as-operating-systems">
+<data key="label">论文1：MemGPT: Towards LLMs as Operating Systems</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-2-zep-a-temporal-knowledge-graph-architecture-for-agent-memory">
+<data key="label">论文2：Zep: A Temporal Knowledge Graph Architecture for Agent Memory</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-3-meminsight-autonomous-memory-augmentation-for-llm-agents">
+<data key="label">论文3：MemInsight: Autonomous Memory Augmentation for LLM Agents</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-4-omni-simplemem-autoresearch-guided-discovery-of-lifelong-multimodal-agent-memory">
+<data key="label">论文4：Omni-SimpleMem: Autoresearch-Guided Discovery of Lifelong Multimodal Agent Memory</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-5-memfactory-unified-inference-training-framework-for-agent-memory">
+<data key="label">论文5：MemFactory: Unified Inference &amp; Training Framework for Agent Memory</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-2">
+<data key="label">🔍 综合分析</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-3">
+<data key="label">领域现状</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-4">
+<data key="label">趋势预测</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-5">
+<data key="label">实践建议</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-6">
+<data key="label">📚 参考文献</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="document-ai-agent-memory-system-research-report-2026-04-03-md">
+<data key="label">AI_Agent_Memory_System_Research_Report_2026-04-03</data>
+<data key="type">Document</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-ai-agent-2026-04-03">
+<data key="label">AI Agent 记忆系统 深度研究报告 — 2026-04-03</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-7">
+<data key="label">📋 研究问题</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-8">
+<data key="label">📖 核心论文/系统解读</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-1-memgpt-llm">
+<data key="label">系统 1：MemGPT — 将 LLM 视为操作系统</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-2-letta-memgpt">
+<data key="label">系统 2：Letta — MemGPT 的进化形态</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-letta-agent">
+<data key="label">Letta Agent 配置示例</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-3-langchain-memory">
+<data key="label">系统 3：LangChain Memory 体系</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-4-redis-ai-agent-memory">
+<data key="label">系统 4：Redis AI Agent Memory</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-9">
+<data key="label">记忆系统架构对比</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-10">
+<data key="label">技术趋势分析</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-11">
+<data key="label">核心挑战与解决方案</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-12">
+<data key="label">📚 知识图谱更新</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-13">
+<data key="label">新增概念</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-14">
+<data key="label">关系网络</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-6-12">
+<data key="label">短期（6-12个月）</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-1-2">
+<data key="label">中期（1-2年）</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-2-5">
+<data key="label">长期（2-5年）</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-15">
+<data key="label">💡 研究建议</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md">
+<data key="label">AI_Agent_Memory_System_Research_Report_2026-04-03_2nd</data>
+<data key="type">Document</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-ai-agent-2026-04-03-2">
+<data key="label">AI Agent 记忆系统 深度研究报告 — 2026-04-03（第2次研究）</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-16">
+<data key="label">📖 核心论文/系统深度解读</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-1-mem0-agent">
+<data key="label">论文 1：Mem0 — 可扩展生产级 Agent 记忆系统</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-2-memgen">
+<data key="label">论文 2：MemGen — 生成式潜在记忆</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-3-continuum-memory-architecture-cma">
+<data key="label">论文 3：Continuum Memory Architecture (CMA) — 连续记忆架构</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-4-preference-aware-memory-update-pamu">
+<data key="label">论文 4：Preference-Aware Memory Update (PAMU)</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-5-multi-agent-memory">
+<data key="label">论文 5：Multi-Agent Memory — 计算机架构视角</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-6-evaluating-memory-structure-in-llm-agents-structmemeval">
+<data key="label">论文 6：Evaluating Memory Structure in LLM Agents (StructMemEval)</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-7-gam-rag-rag">
+<data key="label">论文 7：GAM-RAG — 增益自适应记忆 RAG</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-8-hierarchical-memory-tree-hmt-web-agent">
+<data key="label">论文 8：Hierarchical Memory Tree (HMT) — Web Agent 分层记忆树</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-9-infrastructure-for-tradable-agent-memory">
+<data key="label">论文 9：Infrastructure for Tradable Agent Memory</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-10-emembench">
+<data key="label">论文 10：EMemBench — 情景记忆评估基准</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-2026">
+<data key="label">领域现状：2026年记忆系统格局</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-17">
+<data key="label">核心技术趋势</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-18">
+<data key="label">新增知识图谱概念</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-19">
+<data key="label">🔴 知识缺口更新（相比上次研究新增）</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-20">
+<data key="label">已验证/部分解决的缺口</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-21">
+<data key="label">新增高优先级缺口</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="document-ai-agent-memory-system-research-report-2026-04-03-final-md">
+<data key="label">AI_Agent_Memory_System_Research_Report_2026-04-03_Final</data>
+<data key="type">Document</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-2-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory">
+<data key="label">论文 2：Mem0 — Building Production-Ready AI Agents with Scalable Long-Term Memory</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-3-zep-a-temporal-knowledge-graph-architecture-for-agent-memory">
+<data key="label">论文 3：Zep — A Temporal Knowledge Graph Architecture for Agent Memory</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-4-himem-hierarchical-long-term-memory-for-llm-long-horizon-agents">
+<data key="label">论文 4：HiMem — Hierarchical Long-Term Memory for LLM Long-Horizon Agents</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-5-gaama-graph-augmented-associative-memory-for-agents">
+<data key="label">论文 5：GAAMA — Graph Augmented Associative Memory for Agents</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-22">
+<data key="label">主流技术方向对比</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-23">
+<data key="label">关键研究缺口</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-24">
+<data key="label">核心论文</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-25">
+<data key="label">相关资源</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-2026-2">
+<data key="label">2026年最新研究</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="claim-novel-memory-forgetting-techniques-for-autonomous-ai-agents">
+<data key="label">**Novel Memory Forgetting Techniques for Autonomous AI Agents**</data>
+<data key="type">Claim</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="document-ai-agent-research-daily-2026-04-07-md">
+<data key="label">AI_Agent_Research_Daily_2026-04-07</data>
+<data key="type">Document</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-ai-agent">
+<data key="label">AI Agent 深度研究日报</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-26">
+<data key="label">📊 核心发现</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-1-ai-agent-2025">
+<data key="label">1. AI Agent 记忆架构（2025分水岭）</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-2-agentic-rag">
+<data key="label">2. Agentic RAG 趋势</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-3-token">
+<data key="label">3. Token 优化技术</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-4">
+<data key="label">4. 多智能体协作框架</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-27">
+<data key="label">🔬 技术洞察</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-28">
+<data key="label">记忆系统演进</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-token">
+<data key="label">Token优化策略</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-29">
+<data key="label">📈 行业趋势</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-30">
+<data key="label">🎯 下一步研究</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="document-ai-agent-research-report-2026-04-03-md">
+<data key="label">AI_Agent_记忆系统_Research_Report_2026-04-03</data>
+<data key="type">Document</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-1">
+<data key="label">论文 1：[待搜索填充]</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-31">
+<data key="label">知识缺口</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="document-ai-agent-research-report-2026-04-03-v2-md">
+<data key="label">AI_Agent_记忆系统_Research_Report_2026-04-03_v2</data>
+<data key="type">Document</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="document-ai-memory-systems-comparison-2026-04-07-md">
+<data key="label">AI_Memory_Systems_Comparison_2026-04-07</data>
+<data key="type">Document</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-ai-agent-2">
+<data key="label">AI Agent 记忆系统深度对比分析</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-32">
+<data key="label">🎯 核心问题</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-33">
+<data key="label">📊 记忆系统对比</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-1-memgpt">
+<data key="label">1. MemGPT (伯克利大学)</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-2-mem0">
+<data key="label">2. Mem0 (开源)</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-3-zep">
+<data key="label">3. Zep (上下文工程平台)</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-4-openmemory-mcp-2025-5">
+<data key="label">4. OpenMemory MCP (2025年5月)</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-34">
+<data key="label">📈 技术对比矩阵</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-35">
+<data key="label">🔬 核心机制解析</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-36">
+<data key="label">记忆分层策略</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-37">
+<data key="label">记忆失效机制</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-38">
+<data key="label">选择指南</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-39">
+<data key="label">记忆优化实践</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-40">
+<data key="label">示例：分层记忆管理</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-41">
+<data key="label">🔮 未来趋势</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="system-layeredmemory">
+<data key="label">LayeredMemory</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="method-init">
+<data key="label">__init__</data>
+<data key="type">method</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="method-add">
+<data key="label">add</data>
+<data key="type">method</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="method-recall">
+<data key="label">recall</data>
+<data key="type">method</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="summary-community-8">
+<data key="label">community-8 Summary</data>
+<data key="type">CommunitySummary</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="summary-community-9">
+<data key="label">community-9 Summary</data>
+<data key="type">CommunitySummary</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="document-corrections">
+<data key="label">corrections</data>
+<data key="type">Document</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="lesson-ai-agent-evolution-refresh-views-report">
+<data key="label">AI Agent 记忆系统 在 evolution 闭环里必须先 refresh_views 再生成 report，并处理无效关系</data>
+<data key="type">Lesson</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="session-ai-agent-evolution-cycle-2026-04-08">
+<data key="label">AI Agent 记忆系统 evolution cycle 2026-04-08</data>
+<data key="type">ResearchSession</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="summary-community-10">
+<data key="label">community-10 Summary</data>
+<data key="type">CommunitySummary</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="document-memory">
+<data key="label">memory</data>
+<data key="type">Document</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="pattern-ai-agent-ingest-refresh-views-project-context-12-self-learning">
+<data key="label">AI Agent 记忆系统 先对真实报告执行 ingest，再 refresh_views，再用 project_context 汇总 12 条上下文，最后把结果写回 self_learning 图谱</data>
+<data key="type">Pattern</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="gap-diagnosing-retrieval-vs-utilization-bottleneck">
+<data key="label">Diagnosing Retrieval vs. Utilization Bottleneck...</data>
+<data key="type">Gap</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="document-ai-agent-memory-evolution-2026-04-08-md">
+<data key="label">ai-agent-memory_Evolution_2026-04-08</data>
+<data key="type">Document</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-ai-agent-3">
+<data key="label">AI Agent 记忆系统 演化闭环报告</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-query-time">
+<data key="label">Query-time 投影</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-42">
+<data key="label">图谱报告</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-ai-agent-4">
+<data key="label">AI Agent 记忆系统 图谱报告</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-god-nodes">
+<data key="label">God Nodes</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-communities">
+<data key="label">Communities</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-surprising-connections">
+<data key="label">Surprising Connections</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-43">
+<data key="label">自学习回写</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="system-ai-agent">
+<data key="label">AI Agent</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-query">
+<data key="label">Query</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-communitysummary">
+<data key="label">CommunitySummary</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-lesson">
+<data key="label">Lesson</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-pattern">
+<data key="label">Pattern</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-summary">
+<data key="label">Summary</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-ai-age">
+<data key="label">AI Age</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-reflection">
+<data key="label">REFLECTION</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-context">
+<data key="label">CONTEXT</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-extracted">
+<data key="label">EXTRACTED</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-true">
+<data key="label">True</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-towards-llms">
+<data key="label">Towards LLMs</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="system-operating-systems">
+<data key="label">Operating Systems</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-charles-packer">
+<data key="label">Charles Packer</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-sarah-wooders">
+<data key="label">Sarah Wooders</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-kevin-lin">
+<data key="label">Kevin Lin</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-vivian-fang">
+<data key="label">Vivian Fang</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-shishir">
+<data key="label">Shishir</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-patil">
+<data key="label">Patil</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-ion-stoica">
+<data key="label">Ion Stoica</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-joseph">
+<data key="label">Joseph</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-gonzalez">
+<data key="label">Gonzalez</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-main-context">
+<data key="label">Main Context</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-external-context">
+<data key="label">External Context</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="system-temporal-knowledge-graph-architecture">
+<data key="label">Temporal Knowledge Graph Architecture</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="system-agent-memory">
+<data key="label">Agent Memory</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-preston-rasmussen">
+<data key="label">Preston Rasmussen</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="system-agent">
+<data key="label">Agent</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-mem0-team">
+<data key="label">Mem0 Team</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-locomo">
+<data key="label">LOCOMO</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="system-memory-centric-architecture">
+<data key="label">Memory-Centric Architecture</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-conversational">
+<data key="label">Conversational</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-user-prefs">
+<data key="label">User Prefs</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-entities">
+<data key="label">Entities</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-xingchen-wan">
+<data key="label">Xingchen Wan</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-daniel-pressman">
+<data key="label">Daniel Pressman</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-bryan">
+<data key="label">Bryan</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="system-agentic-rag">
+<data key="label">Agentic RAG</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-token-2">
+<data key="label">Token</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-context-engineering">
+<data key="label">Context Engineering</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-prompt-engineering">
+<data key="label">Prompt Engineering</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-csdn">
+<data key="label">CSDN</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-fdgfgfdgfd">
+<data key="label">FDGFGFDGFD</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-github">
+<data key="label">GitHub</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-autogen">
+<data key="label">AutoGen</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-microsoft">
+<data key="label">Microsoft</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-swarms">
+<data key="label">Swarms</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-chatdev">
+<data key="label">ChatDev</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-openbmb">
+<data key="label">OpenBMB</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="system-model-context-protocol">
+<data key="label">Model Context Protocol</data>
+<data key="type">system</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-item-44">
+<data key="label">如何管理</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-papers">
+<data key="label">Papers</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-code">
+<data key="label">Code</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-cache">
+<data key="label">Cache</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-disk">
+<data key="label">Disk</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-cpu-cache">
+<data key="label">CPU Cache</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-stars">
+<data key="label">Stars</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<node id="concept-engineering">
+<data key="label">Engineering</data>
+<data key="type">concept</data>
+<data key="layer">hot</data>
+<data key="community">community-1</data>
+</node>
+<edge id="e1" source="mem0" target="episodic-memory">
+<data key="relation">implements</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e2" source="mem0" target="semantic-memory">
+<data key="relation">implements</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e3" source="memgpt" target="virtual-context-management">
+<data key="relation">implements</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e4" source="memgpt" target="hierarchical-memory">
+<data key="relation">implements</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e5" source="letta" target="memgpt">
+<data key="relation">extends</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e6" source="letta" target="tool-augmented-memory">
+<data key="relation">implements</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e7" source="redis-memory" target="episodic-memory">
+<data key="relation">enables</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e8" source="rag-memory" target="semantic-memory">
+<data key="relation">combines</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e9" source="virtual-context-management" target="hierarchical-memory">
+<data key="relation">realizes</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e10" source="cma" target="rag-memory">
+<data key="relation">supersedes</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e11" source="cma" target="hierarchical-memory">
+<data key="relation">realizes</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e12" source="mem0-gen" target="cma">
+<data key="relation">implements_partial</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e13" source="memgen" target="cma">
+<data key="relation">implements_partial</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e14" source="pamu" target="cma">
+<data key="relation">implements_partial</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e15" source="gam-rag" target="cma">
+<data key="relation">implements_partial</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e16" source="hmt" target="hierarchical-memory">
+<data key="relation">extends</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e17" source="multi-agent-memory" target="hierarchical-memory">
+<data key="relation">extends</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e18" source="structmemeval" target="cma">
+<data key="relation">validates</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e19" source="tradable-memory" target="episodic-memory">
+<data key="relation">economizes</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e20" source="memgen" target="mem0-gen">
+<data key="relation">complements</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e21" source="pamu" target="mem0-gen">
+<data key="relation">extends</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e22" source="multi-agent-memory" target="redis-memory">
+<data key="relation">needs</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e23" source="zep" target="temporal-knowledge-graph">
+<data key="relation">implements</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e24" source="meminsight" target="semantic-memory">
+<data key="relation">enhances</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e25" source="zep" target="memgpt">
+<data key="relation">competes</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">1.0000</data>
+</edge>
+<edge id="e26" source="summary-community-1" target="mem0">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e27" source="summary-community-1" target="episodic-memory">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e28" source="summary-community-1" target="semantic-memory">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e29" source="summary-community-1" target="redis-memory">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e30" source="summary-community-1" target="tradable-memory">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e31" source="summary-community-1" target="rag-memory">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e32" source="summary-community-1" target="meminsight">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e33" source="summary-community-1" target="multi-agent-memory">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e34" source="summary-community-1" target="cma">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e35" source="summary-community-1" target="hierarchical-memory">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e36" source="summary-community-1" target="mem0-gen">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e37" source="summary-community-1" target="memgen">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e38" source="summary-community-1" target="pamu">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e39" source="summary-community-1" target="gam-rag">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e40" source="summary-community-1" target="structmemeval">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e41" source="summary-community-2" target="langchain-memory">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e42" source="summary-community-3" target="emembench">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e43" source="summary-community-4" target="temporal-chaining">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e44" source="summary-community-5" target="selective-retention">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e45" source="summary-community-6" target="associative-routing">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e46" source="summary-community-7" target="graphiti-engine">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e47" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-ai-agent-2026-04-07">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e48" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-item">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e49" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-1-memgpt-towards-llms-as-operating-systems">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e50" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-2-zep-a-temporal-knowledge-graph-architecture-for-agent-memory">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e51" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-3-meminsight-autonomous-memory-augmentation-for-llm-agents">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e52" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-4-omni-simplemem-autoresearch-guided-discovery-of-lifelong-multimodal-agent-memory">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e53" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-5-memfactory-unified-inference-training-framework-for-agent-memory">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e54" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-item-2">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e55" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-item-3">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e56" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-item-4">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e57" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-item-5">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e58" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-item-6">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e59" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-ai-agent-2026-04-03">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e60" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-item-7">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e61" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-item-8">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e62" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-1-memgpt-llm">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e63" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-2-letta-memgpt">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e64" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-letta-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e65" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-3-langchain-memory">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e66" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-4-redis-ai-agent-memory">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e67" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-item-2">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e68" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-item-9">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e69" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-item-10">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e70" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-item-11">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e71" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-item-12">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e72" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-item-13">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e73" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-item-14">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e74" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-item-4">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e75" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-6-12">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e76" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-1-2">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e77" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-2-5">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e78" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-item-15">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e79" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-ai-agent-2026-04-03-2">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e80" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-item-7">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e81" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-item-16">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e82" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-1-mem0-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e83" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-2-memgen">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e84" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-3-continuum-memory-architecture-cma">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e85" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-4-preference-aware-memory-update-pamu">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e86" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-5-multi-agent-memory">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e87" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-6-evaluating-memory-structure-in-llm-agents-structmemeval">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e88" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-7-gam-rag-rag">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e89" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-8-hierarchical-memory-tree-hmt-web-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e90" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-9-infrastructure-for-tradable-agent-memory">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e91" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-10-emembench">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e92" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-item-2">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e93" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-2026">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e94" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-item-17">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e95" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-item-18">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e96" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-item-19">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e97" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-item-20">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e98" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-item-21">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e99" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-ai-agent-2026-04-03">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e100" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-item-7">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e101" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-item">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e102" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-1-memgpt-towards-llms-as-operating-systems">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e103" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-2-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e104" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-3-zep-a-temporal-knowledge-graph-architecture-for-agent-memory">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e105" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-4-himem-hierarchical-long-term-memory-for-llm-long-horizon-agents">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e106" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-5-gaama-graph-augmented-associative-memory-for-agents">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e107" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-item-2">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e108" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-item-3">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e109" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-item-22">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e110" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-item-4">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e111" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-item-23">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e112" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-item-6">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e113" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-item-24">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e114" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-item-25">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e115" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-2026-2">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e116" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="claim-novel-memory-forgetting-techniques-for-autonomous-ai-agents">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.7200</data>
+</edge>
+<edge id="e117" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-ai-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e118" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-item-26">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e119" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-1-ai-agent-2025">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e120" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-2-agentic-rag">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e121" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-3-token">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e122" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-4">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e123" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-item-27">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e124" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-item-28">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e125" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-token">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e126" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-item-29">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e127" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-item-30">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e128" source="document-ai-agent-research-report-2026-04-03-md" target="concept-ai-agent-2026-04-03">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e129" source="document-ai-agent-research-report-2026-04-03-md" target="concept-item-7">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e130" source="document-ai-agent-research-report-2026-04-03-md" target="concept-item">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e131" source="document-ai-agent-research-report-2026-04-03-md" target="concept-1">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e132" source="document-ai-agent-research-report-2026-04-03-md" target="concept-item-2">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e133" source="document-ai-agent-research-report-2026-04-03-md" target="concept-item-3">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e134" source="document-ai-agent-research-report-2026-04-03-md" target="concept-item-4">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e135" source="document-ai-agent-research-report-2026-04-03-md" target="concept-item-31">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e136" source="document-ai-agent-research-report-2026-04-03-md" target="concept-item-6">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e137" source="document-ai-agent-research-report-2026-04-03-v2-md" target="concept-ai-agent-2026-04-03">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e138" source="document-ai-agent-research-report-2026-04-03-v2-md" target="concept-item-7">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e139" source="document-ai-agent-research-report-2026-04-03-v2-md" target="concept-item">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e140" source="document-ai-agent-research-report-2026-04-03-v2-md" target="concept-1">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e141" source="document-ai-agent-research-report-2026-04-03-v2-md" target="concept-item-2">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e142" source="document-ai-agent-research-report-2026-04-03-v2-md" target="concept-item-3">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e143" source="document-ai-agent-research-report-2026-04-03-v2-md" target="concept-item-4">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e144" source="document-ai-agent-research-report-2026-04-03-v2-md" target="concept-item-31">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e145" source="document-ai-agent-research-report-2026-04-03-v2-md" target="concept-item-6">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e146" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-ai-agent-2">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e147" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-item-32">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e148" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-item-33">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e149" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-1-memgpt">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e150" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-2-mem0">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e151" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-3-zep">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e152" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-4-openmemory-mcp-2025-5">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e153" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-item-34">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e154" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-item-35">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e155" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-item-36">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e156" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-item-37">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e157" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-item-5">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e158" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-item-38">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e159" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-item-39">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e160" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-item-40">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e161" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-item-41">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e162" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-item-6">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e163" source="document-ai-memory-systems-comparison-2026-04-07-md" target="system-layeredmemory">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8000</data>
+</edge>
+<edge id="e164" source="document-ai-memory-systems-comparison-2026-04-07-md" target="method-init">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8000</data>
+</edge>
+<edge id="e165" source="document-ai-memory-systems-comparison-2026-04-07-md" target="method-add">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8000</data>
+</edge>
+<edge id="e166" source="document-ai-memory-systems-comparison-2026-04-07-md" target="method-recall">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8000</data>
+</edge>
+<edge id="e167" source="summary-community-8" target="document-ai-agent-memory-systems-2026-04-07-md">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e168" source="summary-community-8" target="concept-ai-agent-2026-04-07">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e169" source="summary-community-8" target="concept-item">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e170" source="summary-community-8" target="concept-1-memgpt-towards-llms-as-operating-systems">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e171" source="summary-community-8" target="concept-2-zep-a-temporal-knowledge-graph-architecture-for-agent-memory">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e172" source="summary-community-8" target="concept-3-meminsight-autonomous-memory-augmentation-for-llm-agents">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e173" source="summary-community-8" target="concept-4-omni-simplemem-autoresearch-guided-discovery-of-lifelong-multimodal-agent-memory">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e174" source="summary-community-8" target="concept-5-memfactory-unified-inference-training-framework-for-agent-memory">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e175" source="summary-community-8" target="concept-item-2">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e176" source="summary-community-8" target="concept-item-3">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e177" source="summary-community-8" target="concept-item-4">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e178" source="summary-community-8" target="concept-item-5">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e179" source="summary-community-8" target="concept-item-6">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e180" source="summary-community-8" target="document-ai-agent-memory-system-research-report-2026-04-03-final-md">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e181" source="summary-community-8" target="document-ai-agent-research-report-2026-04-03-md">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e182" source="summary-community-1" target="summary-community-1">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e183" source="summary-community-9" target="document-ai-agent-research-daily-2026-04-07-md">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e184" source="summary-community-9" target="concept-ai-agent">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e185" source="summary-community-9" target="concept-item-26">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e186" source="summary-community-9" target="concept-1-ai-agent-2025">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e187" source="summary-community-9" target="concept-2-agentic-rag">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e188" source="summary-community-9" target="concept-3-token">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e189" source="summary-community-9" target="concept-4">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e190" source="summary-community-9" target="concept-item-27">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e191" source="summary-community-9" target="concept-item-28">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e192" source="summary-community-9" target="concept-token">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e193" source="summary-community-9" target="concept-item-29">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e194" source="summary-community-9" target="concept-item-30">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e195" source="summary-community-2" target="summary-community-2">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e196" source="summary-community-3" target="summary-community-3">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e197" source="summary-community-4" target="summary-community-4">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e198" source="summary-community-5" target="summary-community-5">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e199" source="summary-community-6" target="summary-community-6">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e200" source="summary-community-7" target="summary-community-7">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e201" source="lesson-ai-agent-evolution-refresh-views-report" target="session-ai-agent-evolution-cycle-2026-04-08">
+<data key="relation">learned_from</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8500</data>
+</edge>
+<edge id="e202" source="document-corrections" target="lesson-ai-agent-evolution-refresh-views-report">
+<data key="relation">records</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6000</data>
+</edge>
+<edge id="e203" source="summary-community-8" target="summary-community-8">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e204" source="summary-community-9" target="summary-community-9">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e205" source="summary-community-10" target="document-corrections">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e206" source="summary-community-10" target="lesson-ai-agent-evolution-refresh-views-report">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e207" source="summary-community-10" target="session-ai-agent-evolution-cycle-2026-04-08">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e208" source="summary-community-10" target="summary-community-10">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e209" source="pattern-ai-agent-ingest-refresh-views-project-context-12-self-learning" target="session-ai-agent-evolution-cycle-2026-04-08">
+<data key="relation">learned_from</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8500</data>
+</edge>
+<edge id="e210" source="document-memory" target="pattern-ai-agent-ingest-refresh-views-project-context-12-self-learning">
+<data key="relation">records</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e211" source="summary-community-10" target="pattern-ai-agent-ingest-refresh-views-project-context-12-self-learning">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e212" source="summary-community-10" target="document-memory">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e213" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-ai-agent-3">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e214" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-query-time">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e215" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-item-42">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e216" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-ai-agent-4">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e217" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-god-nodes">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e218" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-communities">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e219" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-surprising-connections">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e220" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-item-43">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.8200</data>
+</edge>
+<edge id="e221" source="document-ai-agent-memory-evolution-2026-04-08-md" target="system-ai-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e222" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-query">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e223" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-communitysummary">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e224" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-lesson">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e225" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-pattern">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e226" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-summary">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e227" source="document-ai-agent-memory-evolution-2026-04-08-md" target="cma">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e228" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-ai-age">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e229" source="document-ai-agent-memory-evolution-2026-04-08-md" target="langchain-memory">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e230" source="document-ai-agent-memory-evolution-2026-04-08-md" target="emembench">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e231" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-reflection">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e232" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-context">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e233" source="document-ai-agent-memory-evolution-2026-04-08-md" target="mem0">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e234" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-extracted">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e235" source="document-ai-agent-memory-evolution-2026-04-08-md" target="memgpt">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e236" source="document-ai-agent-memory-evolution-2026-04-08-md" target="letta">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e237" source="document-ai-agent-memory-evolution-2026-04-08-md" target="concept-true">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e238" source="document-ai-agent-memory-systems-2026-04-07-md" target="system-ai-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e239" source="document-ai-agent-memory-systems-2026-04-07-md" target="memgpt">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e240" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-towards-llms">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e241" source="document-ai-agent-memory-systems-2026-04-07-md" target="system-operating-systems">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e242" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-charles-packer">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e243" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-sarah-wooders">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e244" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-kevin-lin">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e245" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-vivian-fang">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e246" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-shishir">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e247" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-patil">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e248" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-ion-stoica">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e249" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-joseph">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e250" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-gonzalez">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e251" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-main-context">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e252" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-external-context">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e253" source="document-ai-agent-memory-systems-2026-04-07-md" target="system-temporal-knowledge-graph-architecture">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e254" source="document-ai-agent-memory-systems-2026-04-07-md" target="system-agent-memory">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e255" source="document-ai-agent-memory-systems-2026-04-07-md" target="concept-preston-rasmussen">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e256" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="system-ai-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e257" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="system-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e258" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="memgpt">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e259" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-charles-packer">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e260" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-sarah-wooders">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e261" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-kevin-lin">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e262" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-vivian-fang">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e263" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-shishir">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e264" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-patil">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e265" source="document-ai-agent-memory-system-research-report-2026-04-03-md" target="concept-joseph">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e266" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="system-ai-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e267" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="system-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e268" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="mem0">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e269" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-mem0-team">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e270" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-locomo">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e271" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="system-memory-centric-architecture">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e272" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-conversational">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e273" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-user-prefs">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e274" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="concept-entities">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e275" source="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md" target="document-memory">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e276" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="system-ai-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e277" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="system-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e278" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="memgpt">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e279" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="mem0">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e280" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-towards-llms">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e281" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="system-operating-systems">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e282" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-charles-packer">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e283" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-shishir">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e284" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-patil">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e285" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-xingchen-wan">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e286" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-daniel-pressman">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e287" source="document-ai-agent-memory-system-research-report-2026-04-03-final-md" target="concept-bryan">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e288" source="document-ai-agent-research-daily-2026-04-07-md" target="system-ai-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e289" source="document-ai-agent-research-daily-2026-04-07-md" target="system-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e290" source="document-ai-agent-research-daily-2026-04-07-md" target="system-agentic-rag">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e291" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-token-2">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e292" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-context-engineering">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e293" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-prompt-engineering">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e294" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-csdn">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e295" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-fdgfgfdgfd">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e296" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-github">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e297" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-autogen">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e298" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-microsoft">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e299" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-swarms">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e300" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-chatdev">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e301" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-openbmb">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e302" source="document-ai-agent-research-daily-2026-04-07-md" target="system-model-context-protocol">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e303" source="document-ai-agent-research-daily-2026-04-07-md" target="mem0">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e304" source="document-ai-agent-research-daily-2026-04-07-md" target="concept-item-44">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e305" source="document-ai-agent-research-report-2026-04-03-md" target="system-ai-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e306" source="document-ai-agent-research-report-2026-04-03-md" target="memgpt">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e307" source="document-ai-agent-research-report-2026-04-03-md" target="concept-papers">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e308" source="document-ai-agent-research-report-2026-04-03-md" target="concept-code">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e309" source="document-ai-agent-research-report-2026-04-03-v2-md" target="system-ai-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e310" source="document-ai-agent-research-report-2026-04-03-v2-md" target="memgpt">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e311" source="document-ai-agent-research-report-2026-04-03-v2-md" target="concept-papers">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e312" source="document-ai-agent-research-report-2026-04-03-v2-md" target="concept-code">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e313" source="document-ai-memory-systems-comparison-2026-04-07-md" target="system-ai-agent">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e314" source="document-ai-memory-systems-comparison-2026-04-07-md" target="memgpt">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e315" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-cache">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e316" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-disk">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e317" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-cpu-cache">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e318" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-github">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e319" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-stars">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e320" source="document-ai-memory-systems-comparison-2026-04-07-md" target="mem0">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e321" source="document-ai-memory-systems-comparison-2026-04-07-md" target="concept-engineering">
+<data key="relation">mentions</data>
+<data key="status">EXTRACTED</data>
+<data key="confidence">0.6800</data>
+</edge>
+<edge id="e322" source="summary-community-1" target="document-ai-agent-memory-evolution-2026-04-08-md">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e323" source="summary-community-1" target="document-ai-agent-memory-system-research-report-2026-04-03-2nd-md">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e324" source="summary-community-1" target="document-ai-agent-memory-system-research-report-2026-04-03-final-md">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e325" source="summary-community-1" target="document-ai-agent-research-daily-2026-04-07-md">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e326" source="summary-community-1" target="document-ai-memory-systems-comparison-2026-04-07-md">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e327" source="summary-community-2" target="temporal-chaining">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e328" source="summary-community-2" target="summary-community-4">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e329" source="summary-community-3" target="selective-retention">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e330" source="summary-community-3" target="summary-community-5">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e331" source="summary-community-4" target="associative-routing">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e332" source="summary-community-4" target="summary-community-6">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e333" source="summary-community-5" target="graphiti-engine">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e334" source="summary-community-5" target="summary-community-7">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+<edge id="e335" source="summary-community-6" target="gap-diagnosing-retrieval-vs-utilization-bottleneck">
+<data key="relation">summarizes</data>
+<data key="status">INFERRED</data>
+<data key="confidence">0.7000</data>
+</edge>
+</graph>
+</graphml>

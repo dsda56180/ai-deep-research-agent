@@ -1,0 +1,27 @@
+{
+  "topic": "ai-agent-memory",
+  "metadata": {
+    "created": "2026-04-08T12:07:55.758241",
+    "updated": "2026-04-08T12:07:55.760807",
+    "paper_count": 0,
+    "concept_count": 0,
+    "relation_count": 0,
+    "document_count": 0,
+    "entity_count": 0,
+    "graph_version": 2
+  },
+  "entities": [],
+  "edges": [],
+  "concepts": [],
+  "relations": [],
+  "insights": {
+    "breakthroughs": [],
+    "gaps": [],
+    "trends": [],
+    "questions": [],
+    "contradictions": []
+  },
+  "communities": [],
+  "summaries": [],
+  "alias_index": {}
+}

@@ -25,8 +25,10 @@ from direct_researcher import (
     filter_high_quality_papers, generate_reproduction_guide,
     ResearchProgress
 )
-from knowledge_evolution import KnowledgeEvolutionEngine
+from knowledge_graph import get_or_create_graph, resolve_graph_location
 from ima_knowledge_solidifier import IMAKnowledgeBase
+from global_graph import GlobalKnowledgeGraph
+from evolution import control_scheduler_topic, get_scheduler_status, run_batch_evolution, run_scheduled_evolution
 
 # ============================================
 # 工具函数
@@ -34,11 +36,45 @@ from ima_knowledge_solidifier import IMAKnowledgeBase
 
 def load_topics_config():
     import yaml
-    cfg_file = CONFIG_DIR / "optimized_config.yaml"
-    if not cfg_file.exists():
-        cfg_file = CONFIG_DIR / "topics.yaml"
-    with open(cfg_file, 'r', encoding='utf-8') as f:
-        return yaml.safe_load(f)
+    config_paths = [
+        CONFIG_DIR / "optimized_config.yaml",
+        CONFIG_DIR / "topics.yaml",
+    ]
+    merged = {}
+    merged_topics = []
+    for cfg_file in config_paths:
+        if not cfg_file.exists():
+            continue
+        with open(cfg_file, 'r', encoding='utf-8') as f:
+            config = yaml.safe_load(f) or {}
+        for key, value in config.items():
+            if key == "topics":
+                continue
+            if key not in merged:
+                merged[key] = value
+        for topic in config.get("topics", []):
+            topic_tokens = {
+                normalize_topic_label(topic.get("id", "")),
+                normalize_topic_label(topic.get("name", "")),
+            } - {""}
+            existing_topic = next(
+                (
+                    item for item in merged_topics
+                    if topic_tokens & ({
+                        normalize_topic_label(item.get("id", "")),
+                        normalize_topic_label(item.get("name", "")),
+                    } - {""})
+                ),
+                None,
+            )
+            if existing_topic:
+                for key, value in topic.items():
+                    if value not in (None, "", [], {}):
+                        existing_topic[key] = value
+                continue
+            merged_topics.append(dict(topic))
+    merged["topics"] = merged_topics
+    return merged
 
 def today():
     return datetime.now().strftime("%Y-%m-%d")
@@ -46,171 +82,182 @@ def today():
 def now():
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+
+def normalize_topic_label(value: str) -> str:
+    return "".join(ch for ch in (value or "").lower() if ch not in {" ", "-", "_"})
+
+
+def topic_matches(topic: Dict, query: str) -> bool:
+    if not query:
+        return True
+    resolved_name, _, resolved_file = resolve_graph_location(query)
+    query_labels = {
+        query,
+        resolved_name,
+        Path(resolved_file).stem.replace("_knowledge_graph", ""),
+    }
+    topic_labels = {
+        topic.get("name", ""),
+        topic.get("id", ""),
+    }
+    normalized_queries = {normalize_topic_label(item) for item in query_labels if item}
+    normalized_topics = {normalize_topic_label(item) for item in topic_labels if item}
+    return any(
+        query_token and topic_token and (query_token in topic_token or topic_token in query_token)
+        for query_token in normalized_queries
+        for topic_token in normalized_topics
+    )
+
+
+def load_topic_graph(topic_name: str):
+    resolved_topic, graph_dir, graph_filename = resolve_graph_location(topic_name)
+    return get_or_create_graph(resolved_topic, base_dir=graph_dir, filename=graph_filename)
+
+
+def build_evolution_snapshot(topic_name: str) -> Dict:
+    graph = load_topic_graph(topic_name)
+    graph.compute_communities()
+    stats = graph.graph_stats()
+    raw_graph_path = KNOWLEDGE_DIR / "graphs" / f"{topic_name.replace(' ', '_')}_knowledge_graph.json"
+    insights = {}
+    if raw_graph_path.exists():
+        with open(raw_graph_path, 'r', encoding='utf-8') as f:
+            insights = json.load(f).get("insights", {})
+    summary_lines = [
+        f"实体：{stats.get('entities', 0)}",
+        f"关系：{stats.get('edges', 0)}",
+        f"社区：{stats.get('communities', 0)}",
+        f"文档：{stats.get('documents', 0)}",
+        f"更新时间：{(stats.get('updated', 'N/A') or 'N/A')[:19]}",
+    ]
+    return {
+        "summary": "\n".join(summary_lines),
+        "insights": insights,
+    }
+
 # ============================================
 # 核心命令
 # ============================================
 
-def cmd_research(topic_name: str = None, force: bool = False, no_ima: bool = False):
-    """
-    P0: 直研模式执行深度研究
-    P1: 知识进化 + 自动图谱更新
-    P2: 质量评估 + 复现指南
-    P3: 增量更新 + 进度可视化 + 自我进化
-    """
+def cmd_research(topic_name: str = None, force: bool = False, no_ima: bool = False, ingest_path: str = "", query: str = "", budget: int = 1600):
+    """统一研究入口，执行可自引导的批量演化闭环。"""
     print("=" * 60)
-    print("🔬 AI Deep Research Agent v2 — 自我进化版")
+    print("🔬 AI Deep Research Agent v2 — 自主进化入口")
     print(f"   时间：{now()}")
     print("=" * 60)
 
-    config = load_topics_config()
-    topics = [t for t in config.get("topics", []) if t.get("enabled", True)]
+    result = run_batch_evolution(
+        topic_name=topic_name or "",
+        force=force,
+        ingest_path=ingest_path or None,
+        query=query,
+        budget=budget,
+        sync=not no_ima,
+    )
 
-    if topic_name:
-        topics = [t for t in topics if topic_name.lower() in t["name"].lower()]
-        if not topics:
-            print(f"❌ 未找到主题：{topic_name}")
-            return 1
+    if not result.get("processed_topics"):
+        print(f"❌ {result.get('error', '没有可执行的主题')}")
+        return 1
 
-    cache = load_cache()
-    results = []
-
-    for topic in topics:
-        name = topic["name"]
-        print(f"\n📌 主题：{name}")
-
-        # P3: 进度可视化
-        progress = ResearchProgress(total_steps=7)
-        print(progress.render())
-
-        # 阶段 1：搜索论文
-        print("\n📥 阶段 1/7：搜索论文...")
-        progress.advance()
-        progress.complete_step("搜索论文")
-        print(progress.render())
-
-        # 阶段 2：筛选高质量论文
-        print("\n🔍 阶段 2/7：筛选高质量论文...")
-        progress.advance()
-        progress.complete_step("筛选论文")
-        print(progress.render())
-
-        # 阶段 3：深度分析
-        print("\n🧠 阶段 3/7：深度分析...")
-        progress.advance()
-        
-        # 生成研究报告文件
-        report_content = generate_research_report(topic, cache)
-        if report_content:
-            report_path = save_research_report(name, report_content)
-            print(f"   📝 报告已生成：{report_path}")
-        
-        progress.complete_step("深度分析")
-        print(progress.render())
-
-        # 阶段 4：知识图谱进化
-        print("\n📊 阶段 4/7：知识图谱进化...")
-        progress.advance()
-        
-        graph_file = KNOWLEDGE_DIR / "graphs" / f"{name.replace(' ', '_')}_knowledge_graph.json"
-        if graph_file.exists():
-            # 调用知识进化模块
-            from knowledge_evolution_v2 import evolve_all
-            paper_data = {
-                "id": report_path.stem if report_path else "",
-                "title": name,
-                "systems": extract_systems_from_report(report_content),
-                "methods": extract_methods_from_report(report_content),
-                "abstract": report_content[:2000] if report_content else ""
-            }
-            evolution_result = evolve_all(name, paper_data)
-            print(f"   新概念：{len(evolution_result.get('knowledge_graph', {}).get('new_concepts', []))}")
-            print(f"   新关系：{len(evolution_result.get('knowledge_graph', {}).get('new_relations', []))}")
-        
-        progress.complete_step("知识图谱进化")
-        print(progress.render())
-
-        # 阶段 5：更新研究方法论
-        print("\n📖 阶段 5/7：更新研究方法论...")
-        progress.advance()
-        
-        # 提取方法论洞察
-        methodology_insights = extract_methodology_insights(report_content)
-        if methodology_insights:
-            from knowledge_evolution_v2 import evolve_methodology
-            evolve_methodology(methodology_insights)
-            print(f"   新增 {len(methodology_insights)} 条方法论洞察")
-        
-        progress.complete_step("方法论更新")
-        print(progress.render())
-
-        # 阶段 6：更新知识缺口
-        print("\n🔴 阶段 6/7：更新知识缺口...")
-        progress.advance()
-        
-        # 提取知识缺口
-        new_gaps = extract_knowledge_gaps(report_content)
-        if new_gaps:
-            from knowledge_evolution_v2 import evolve_knowledge_gaps
-            evolve_knowledge_gaps(name, new_gaps, [])
-            print(f"   新增 {len(new_gaps)} 个知识缺口")
-        
-        progress.complete_step("知识缺口更新")
-        print(progress.render())
-
-        # 阶段 7：IMA 固化
-        print("\n📤 阶段 7/7：IMA 同步...")
-        progress.advance()
-        
-        if not no_ima:
-            kb_id = topic.get("target_knowledge_base")
-            if kb_id:
-                try:
-                    kb = IMAKnowledgeBase(kb_id)
-                    
-                    # 固化研究报告
-                    if report_content:
-                        note_id = kb.create_research_note(
-                            f"{name} 深度研究报告 — {today()}",
-                            report_content
-                        )
-                        if note_id:
-                            kb.add_note_to_kb(note_id, f"{name} 深度研究报告")
-                    
-                    # 固化知识图谱
-                    if graph_file.exists():
-                        kb.upload_knowledge_graph(str(graph_file), name)
-                        
-                    # 固化方法论（如果有更新）
-                    if methodology_insights:
-                        kb.create_research_note(
-                            f"{name} 方法论更新 — {today()}",
-                            "\n".join([f"- {i}" for i in methodology_insights])
-                        )
-                    
-                    # 固化知识缺口（如果有新缺口）
-                    if new_gaps:
-                        kb.create_research_note(
-                            f"{name} 知识缺口更新 — {today()}",
-                            "\n".join([f"- {g.get('title', '')}" for g in new_gaps])
-                        )
-                        
-                except Exception as e:
-                    print(f"   ⚠️ IMA 同步异常：{e}")
-        
-        progress.complete_step("IMA同步")
-        print(progress.render())
-
-        # 更新缓存
-        cache["last_update"][name] = today()
-        save_cache(cache)
-
-        results.append({"topic": name, "success": True})
-        print(f"\n✅ {name} 研究完成")
-
-    success_count = sum(1 for r in results if r.get("success"))
     print(f"\n{'=' * 60}")
-    print(f"📊 完成：{success_count}/{len(results)} 个主题")
+    print(
+        f"📊 完成：{result.get('succeeded_topics', 0)}/{result.get('processed_topics', 0)} 个主题"
+        f" | 失败：{result.get('failed_topics', 0)}"
+    )
     print("=" * 60)
+
+    failed = [item for item in result.get("topics", []) if not item.get("success")]
+    if failed:
+        for item in failed:
+            print(f"❌ {item.get('topic', item.get('topic_id', 'unknown'))}: {item.get('error', '执行失败')}")
+        return 1
+    return 0
+
+
+def cmd_schedule(topic_name: str = None, force: bool = False, no_ima: bool = False, ingest_path: str = "", query: str = "", budget: int = 1600, loop: bool = False, interval_minutes: int = 60):
+    """统一调度入口，按主题 frequency 执行自治演化。"""
+    print("=" * 60)
+    print("⏱️ AI Deep Research Agent v2 — 自治调度入口")
+    print(f"   时间：{now()}")
+    print("=" * 60)
+
+    result = run_scheduled_evolution(
+        topic_name=topic_name or "",
+        force=force,
+        ingest_path=ingest_path or None,
+        query=query,
+        budget=budget,
+        sync=not no_ima,
+        loop=loop,
+        interval_minutes=interval_minutes,
+    )
+
+    if loop:
+        return 0
+
+    print(f"\n📌 到期主题：{len(result.get('due_topics', []))}")
+    print(f"📌 跳过主题：{len(result.get('skipped_topics', []))}")
+    print(f"📌 暂停主题：{len(result.get('paused_topics', []))}")
+    if result.get("schedule"):
+        print(
+            "📌 调度策略："
+            f" 每主题最多 {result['schedule'].get('retry_attempts_per_topic', 1)} 次尝试"
+            f" | 本轮评估 {result['schedule'].get('evaluated_topics', 0)} 个主题"
+        )
+    if result.get("global_refresh", {}).get("updated"):
+        print(f"📌 已刷新跨主题洞察：{result['global_refresh'].get('insights_path', '')}")
+    paused = result.get("paused_topics", [])
+    if paused:
+        for item in paused[:5]:
+            print(
+                f"⏸️ {item.get('topic', item.get('topic_id', 'unknown'))}"
+                f" | 原因：{item.get('pause_reason', 'paused')}"
+                f" | 恢复时间：{item.get('paused_until', 'manual') or 'manual'}"
+            )
+
+    failed = [item for item in result.get("topics", []) if not item.get("success")]
+    if failed:
+        for item in failed:
+            print(f"❌ {item.get('topic', item.get('topic_id', 'unknown'))}: {item.get('error', '执行失败')}")
+        return 1
+    return 0
+
+
+def cmd_scheduler(action: str, topic_name: str = "", limit: int = 10, hours: int = 24):
+    """查看或控制调度状态。"""
+    print("=" * 60)
+    print("🛰️ AI Deep Research Agent v2 — 调度状态中心")
+    print(f"   时间：{now()}")
+    print("=" * 60)
+
+    if action == "status":
+        result = get_scheduler_status(topic_name=topic_name or "", limit=limit)
+        summary = result.get("summary", {})
+        print(
+            f"\n📊 启用主题：{summary.get('enabled_topics', 0)}"
+            f" | 到期/待重试：{summary.get('due_topics', 0)}"
+            f" | 暂停：{summary.get('paused_topics', 0)}"
+            f" | 失败中：{summary.get('failing_topics', 0)}"
+        )
+        for item in result.get("topics", [])[:limit]:
+            state = "paused" if item.get("paused") else "due" if item.get("due") or item.get("retry_due") else "idle"
+            print(
+                f" - {item.get('topic', item.get('topic_id', 'unknown'))}"
+                f" | 状态：{state}"
+                f" | 连续失败：{item.get('consecutive_failures', 0)}"
+                f" | 下次运行：{item.get('next_run_at', '')}"
+            )
+        return 0
+
+    result = control_scheduler_topic(action, topic_name=topic_name or "", hours=hours)
+    if not result.get("success"):
+        print(f"❌ {result.get('error', '调度控制失败')}")
+        return 1
+    print(
+        f"\n✅ 已执行 {result.get('action')}：{result.get('topic', result.get('topic_id', 'unknown'))}"
+        f"\n   暂停到：{result.get('state', {}).get('paused_until', '') or '未暂停'}"
+        f"\n   连续失败：{result.get('state', {}).get('consecutive_failures', 0)}"
+    )
     return 0
 
 
@@ -363,7 +410,7 @@ def cmd_progress(topic_name: str = None):
     topics = config.get("topics", [])
 
     if topic_name:
-        topics = [t for t in topics if topic_name.lower() in t["name"].lower()]
+        topics = [t for t in topics if topic_matches(t, topic_name)]
 
     for t in topics:
         name = t["name"]
@@ -375,11 +422,11 @@ def cmd_progress(topic_name: str = None):
             print("   ⚠️ 尚未开始研究")
             continue
 
-        engine = KnowledgeEvolutionEngine(str(gf))
-        print(engine.get_evolution_summary())
+        snapshot = build_evolution_snapshot(name)
+        print(snapshot["summary"])
 
         # 知识缺口
-        gaps = engine.graph.get("insights", {}).get("gaps", [])
+        gaps = snapshot["insights"].get("gaps", [])
         if gaps:
             print(f"\n🔴 知识缺口（{len(gaps)} 个）：")
             for g in gaps[:5]:
@@ -389,7 +436,7 @@ def cmd_progress(topic_name: str = None):
                     print(f"   - {g}")
 
         # 矛盾
-        contradictions = engine.graph.get("insights", {}).get("contradictions", [])
+        contradictions = snapshot["insights"].get("contradictions", [])
         if contradictions:
             print(f"\n⚠️ 矛盾发现（{len(contradictions)} 个）：")
             for c in contradictions[:3]:
@@ -432,17 +479,76 @@ def cmd_evolution_summary(topic_name: str = None):
     topics = config.get("topics", [])
 
     if topic_name:
-        topics = [t for t in topics if topic_name.lower() in t["name"].lower()]
+        topics = [t for t in topics if topic_matches(t, topic_name)]
 
     for t in topics:
         name = t["name"]
         gf = KNOWLEDGE_DIR / "graphs" / f"{name.replace(' ', '_')}_knowledge_graph.json"
         if gf.exists():
-            engine = KnowledgeEvolutionEngine(str(gf))
             print(f"\n{'=' * 50}")
             print(f"📊 {name} — 知识进化摘要")
             print("=" * 50)
-            print(engine.get_evolution_summary())
+            print(build_evolution_snapshot(name)["summary"])
+
+
+def cmd_graph(topic_name: str, action: str, text: str = "", target: str = "", from_node: str = "", to_node: str = "", output: str = "", mode: str = "bfs", depth: int = 2, budget: int = 1600, limit: int = 10):
+    graph = load_topic_graph(topic_name)
+    if action == "stats":
+        graph.compute_communities()
+        print(json.dumps(graph.graph_stats(), ensure_ascii=False, indent=2))
+    elif action == "query":
+        print(json.dumps([entity.to_dict() for entity in graph.search_entities(text, limit=limit)], ensure_ascii=False, indent=2))
+    elif action == "navigate":
+        print(json.dumps(graph.query_graph(text or topic_name, mode=mode, depth=depth, token_budget=budget, top_k=limit), ensure_ascii=False, indent=2))
+    elif action == "neighbors":
+        print(json.dumps(graph.get_neighbors(target or text, limit=limit), ensure_ascii=False, indent=2))
+    elif action == "path":
+        print(json.dumps(graph.shortest_path(from_node, to_node, max_hops=max(4, depth * 2)), ensure_ascii=False, indent=2))
+    elif action == "benchmark":
+        print(json.dumps(graph.benchmark_context([text] if text else None, mode=mode, depth=depth, token_budget=budget), ensure_ascii=False, indent=2))
+    elif action == "god-nodes":
+        print(json.dumps(graph.god_nodes(top_n=limit), ensure_ascii=False, indent=2))
+    elif action == "surprising":
+        print(json.dumps(graph.surprising_connections(top_n=limit), ensure_ascii=False, indent=2))
+    elif action == "export":
+        if not output:
+            print("❌ 请提供 --output")
+            return 1
+        if output.lower().endswith(".graphml"):
+            result = {"path": str(graph.export_graphml(output))}
+        else:
+            result = graph.export_wiki(output)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    else:
+        print(f"❌ 不支持的图谱动作：{action}")
+        return 1
+    return 0
+
+
+def cmd_global(action: str, keyword: str = "", topic_id: str = "", limit: int = 10, force: bool = False):
+    graph = GlobalKnowledgeGraph()
+    if action == "build":
+        print(json.dumps(graph.build_from_topics(), ensure_ascii=False, indent=2))
+    elif action == "summary":
+        print(graph.get_summary())
+    elif action == "shared":
+        print(json.dumps(graph.get_shared_concepts()[:limit], ensure_ascii=False, indent=2))
+    elif action == "search":
+        print(json.dumps(graph.search_concept(keyword)[:limit], ensure_ascii=False, indent=2))
+    elif action == "relations":
+        print(json.dumps(graph.get_topic_relations(topic_id), ensure_ascii=False, indent=2))
+    elif action == "stats":
+        print(json.dumps(graph.topic_stats(topic_id), ensure_ascii=False, indent=2))
+    elif action == "benchmark":
+        print(json.dumps(graph.benchmark_all(limit=limit), ensure_ascii=False, indent=2))
+    elif action == "bootstrap":
+        result = graph.bootstrap_topics(topic_id=topic_id, force=force)
+        result["global_stats"] = graph.build_from_topics().get("statistics", {})
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    else:
+        print(f"❌ 不支持的全局动作：{action}")
+        return 1
+    return 0
 
 
 # ============================================
@@ -453,11 +559,15 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="AI Deep Research Agent v2 — 完整优化版",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
+        epilog=r"""
 命令示例：
   python research_agent.py research                    # 研究所有启用主题
   python research_agent.py research -t "AI Agent记忆"  # 研究指定主题
   python research_agent.py research --force            # 强制重新研究（忽略缓存）
+  python research_agent.py research --budget 2200      # 提高上下文预算
+  python research_agent.py research --ingest-path d:\data\reports
+  python research_agent.py schedule                   # 按 frequency 执行一次自治调度
+  python research_agent.py schedule --loop            # 持续无人值守调度
   python research_agent.py list                        # 列出所有主题
   python research_agent.py progress                    # 查看研究进度
   python research_agent.py evolution                   # 知识进化摘要
@@ -472,6 +582,27 @@ if __name__ == "__main__":
     r.add_argument("--topic", "-t", help="指定主题")
     r.add_argument("--force", "-f", action="store_true", help="强制重新研究")
     r.add_argument("--no-ima", action="store_true", help="不同步IMA")
+    r.add_argument("--ingest-path", default="", help="指定真实 ingest 的文件或目录")
+    r.add_argument("--query", default="", help="覆盖默认研究查询意图")
+    r.add_argument("--budget", type=int, default=1600, help="project_context 上下文预算")
+
+    # schedule
+    sch = sub.add_parser("schedule", help="按 frequency 执行自治调度")
+    sch.add_argument("--topic", "-t", default="")
+    sch.add_argument("--force", "-f", action="store_true")
+    sch.add_argument("--no-ima", action="store_true")
+    sch.add_argument("--ingest-path", default="", help="指定真实 ingest 的文件或目录")
+    sch.add_argument("--query", default="", help="覆盖默认研究查询意图")
+    sch.add_argument("--budget", type=int, default=1600, help="project_context 上下文预算")
+    sch.add_argument("--loop", action="store_true", help="持续运行调度器")
+    sch.add_argument("--interval-minutes", type=int, default=60, help="循环模式下的调度间隔")
+
+    # scheduler
+    ctl = sub.add_parser("scheduler", help="查看或控制自治调度状态")
+    ctl.add_argument("--action", choices=["status", "pause", "resume", "reset"], required=True)
+    ctl.add_argument("--topic", "-t", default="")
+    ctl.add_argument("--limit", type=int, default=10, help="status 模式展示的主题数量")
+    ctl.add_argument("--hours", type=int, default=24, help="pause 模式的暂停小时数")
 
     # list
     sub.add_parser("list", help="列出所有主题")
@@ -490,10 +621,36 @@ if __name__ == "__main__":
     a.add_argument("--keywords", "-k", nargs="+", required=True)
     a.add_argument("--questions", "-q", nargs="+")
 
+    # graph
+    g = sub.add_parser("graph", help="统一图谱入口")
+    g.add_argument("--topic", "-t", required=True)
+    g.add_argument("--action", choices=["stats", "query", "navigate", "neighbors", "path", "benchmark", "god-nodes", "surprising", "export"], required=True)
+    g.add_argument("--text", default="")
+    g.add_argument("--target", default="")
+    g.add_argument("--from-node", default="")
+    g.add_argument("--to-node", default="")
+    g.add_argument("--output", default="")
+    g.add_argument("--mode", choices=["bfs", "dfs"], default="bfs")
+    g.add_argument("--depth", type=int, default=2)
+    g.add_argument("--budget", type=int, default=1600)
+    g.add_argument("--limit", type=int, default=10)
+
+    # global
+    gg = sub.add_parser("global", help="全局知识图谱入口")
+    gg.add_argument("--action", choices=["build", "summary", "shared", "search", "relations", "stats", "benchmark", "bootstrap"], required=True)
+    gg.add_argument("--keyword", "-k", default="")
+    gg.add_argument("--topic", "-t", default="")
+    gg.add_argument("--limit", type=int, default=10)
+    gg.add_argument("--force", action="store_true")
+
     args = parser.parse_args()
 
     if args.cmd == "research":
-        sys.exit(cmd_research(args.topic, args.force, args.no_ima))
+        sys.exit(cmd_research(args.topic, args.force, args.no_ima, args.ingest_path, args.query, args.budget))
+    elif args.cmd == "schedule":
+        sys.exit(cmd_schedule(args.topic, args.force, args.no_ima, args.ingest_path, args.query, args.budget, args.loop, args.interval_minutes))
+    elif args.cmd == "scheduler":
+        sys.exit(cmd_scheduler(args.action, args.topic, args.limit, args.hours))
     elif args.cmd == "list":
         cmd_list()
     elif args.cmd == "progress":
@@ -502,5 +659,9 @@ if __name__ == "__main__":
         cmd_evolution_summary(args.topic)
     elif args.cmd == "add":
         sys.exit(cmd_add_topic(args.name, args.keywords, args.questions))
+    elif args.cmd == "graph":
+        sys.exit(cmd_graph(args.topic, args.action, text=args.text, target=args.target, from_node=args.from_node, to_node=args.to_node, output=args.output, mode=args.mode, depth=args.depth, budget=args.budget, limit=args.limit))
+    elif args.cmd == "global":
+        sys.exit(cmd_global(args.action, keyword=args.keyword, topic_id=args.topic, limit=args.limit, force=args.force))
     else:
         parser.print_help()

@@ -7,10 +7,15 @@
 import os
 import sys
 import json
+import re
 from pathlib import Path
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Tuple
 from collections import Counter
+
+import yaml
+
+from knowledge_graph import Relation, get_or_create_graph
 
 SCRIPT_DIR = Path(__file__).parent
 SKILL_DIR = SCRIPT_DIR.parent
@@ -18,6 +23,14 @@ LEARNINGS_DIR = SKILL_DIR / ".learnings"
 METHODS_DIR = LEARNINGS_DIR / "methods"
 PATTERNS_DIR = LEARNINGS_DIR / "patterns"
 ARCHIVE_DIR = LEARNINGS_DIR / "archive"
+TOPICS_DIR = SKILL_DIR / "topics"
+KNOWLEDGE_DIR = SKILL_DIR / "knowledge"
+
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="ignore")
+    except Exception:
+        pass
 
 # 确保目录存在
 for d in [LEARNINGS_DIR, METHODS_DIR, PATTERNS_DIR, ARCHIVE_DIR]:
@@ -34,6 +47,7 @@ class LearningMemory:
         self.memory_file = LEARNINGS_DIR / "memory.md"
         self.corrections_file = LEARNINGS_DIR / "corrections.md"
         self.usage_stats = LEARNINGS_DIR / "usage_stats.json"
+        self._topics_cache = None
         self._load_memory()
     
     def _load_memory(self):
@@ -56,8 +70,9 @@ class LearningMemory:
             with open(self.usage_stats, 'r', encoding='utf-8') as f:
                 self.stats = json.load(f)
         else:
-            self.stats = {"patterns": {}, "corrections": {}, "last_promoted": {}}
+            self.stats = {"patterns": {}, "corrections": {}, "last_promoted": {}, "signal_meta": {}}
             self._save_stats()
+        self._ensure_stats_schema()
     
     def _init_memory(self) -> str:
         """初始化记忆模板"""
@@ -85,6 +100,38 @@ class LearningMemory:
         """保存记忆"""
         with open(self.memory_file, 'w', encoding='utf-8') as f:
             f.write(self.memory_content)
+
+    def _touch_memory_timestamp(self):
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        updated = re.sub(
+            r"(> 最后更新：)(\d{4}-\d{2}-\d{2})",
+            rf"\g<1>{current_date}",
+            self.memory_content,
+            count=1,
+        )
+        if updated == self.memory_content and "> 最后更新：" not in self.memory_content:
+            updated = f"> 最后更新：{current_date}\n\n{self.memory_content.lstrip()}"
+        self.memory_content = updated
+
+    def _append_success_pattern(self, pattern: str, context: str, usage_count: int):
+        self._touch_memory_timestamp()
+        normalized_pattern = pattern.strip()
+        if not normalized_pattern:
+            return
+        if normalized_pattern.lower() in self.memory_content.lower():
+            self._save_memory()
+            return
+        section_title = "## ✅ 成功模式（自动积累）"
+        if section_title not in self.memory_content:
+            self.memory_content = self.memory_content.rstrip() + f"\n\n{section_title}\n"
+        today = datetime.now().strftime("%Y-%m-%d")
+        entry = (
+            f"\n### {today} 模式 {usage_count}\n"
+            f"- PATTERN: {normalized_pattern}\n"
+            f"- CONTEXT: {context.strip() or 'general'}\n"
+        )
+        self.memory_content = self.memory_content.rstrip() + entry + "\n"
+        self._save_memory()
     
     def _save_corrections(self):
         """保存纠正记录"""
@@ -95,10 +142,117 @@ class LearningMemory:
         """保存统计"""
         with open(self.usage_stats, 'w', encoding='utf-8') as f:
             json.dump(self.stats, f, ensure_ascii=False, indent=2)
+
+    def _ensure_stats_schema(self):
+        self.stats.setdefault("patterns", {})
+        self.stats.setdefault("corrections", {})
+        self.stats.setdefault("last_promoted", {})
+        self.stats.setdefault("signal_meta", {})
+
+    def _touch_signal_meta(self, bucket: str, key: str):
+        self._ensure_stats_schema()
+        meta = self.stats["signal_meta"].setdefault(key, {})
+        now_value = datetime.now().isoformat()
+        meta.setdefault("created_at", now_value)
+        meta["last_seen"] = now_value
+        meta["bucket"] = bucket
+        meta["raw_count"] = self.stats.get(bucket, {}).get(key, 0)
+
+    def _effective_signal_score(self, bucket: str, key: str) -> float:
+        self._ensure_stats_schema()
+        raw_count = self.stats.get(bucket, {}).get(key, 0)
+        if raw_count <= 0:
+            return 0.0
+        meta = self.stats["signal_meta"].get(key, {})
+        last_seen = meta.get("last_seen") or meta.get("created_at")
+        idle_days = 0
+        if last_seen:
+            try:
+                idle_days = max(0, (datetime.now() - datetime.fromisoformat(last_seen)).days)
+            except ValueError:
+                idle_days = 0
+        decay_factor = 0.88 ** (idle_days // 7)
+        return round(raw_count * decay_factor, 2)
     
     # ========================================
     # 学习信号处理
     # ========================================
+
+    def _load_topics(self) -> List[Dict]:
+        if self._topics_cache is not None:
+            return self._topics_cache
+        config_file = SKILL_DIR / "config" / "topics.yaml"
+        if not config_file.exists():
+            self._topics_cache = []
+            return self._topics_cache
+        with open(config_file, 'r', encoding='utf-8') as f:
+            config = yaml.safe_load(f) or {}
+        self._topics_cache = config.get("topics", [])
+        return self._topics_cache
+
+    def _resolve_topic(self, context: str) -> Tuple[str, Optional[str]]:
+        normalized = re.sub(r"[^a-z0-9\u4e00-\u9fff]+", "", (context or "").lower())
+        for topic in self._load_topics():
+            candidates = [topic.get("id", ""), topic.get("name", "")]
+            candidates.extend(topic.get("keywords", []))
+            for candidate in candidates:
+                if not candidate:
+                    continue
+                candidate_normalized = re.sub(r"[^a-z0-9\u4e00-\u9fff]+", "", str(candidate).lower())
+                if candidate_normalized and candidate_normalized in normalized:
+                    return topic.get("name", "self-learning"), topic.get("id")
+        return "self-learning", None
+
+    def _get_graph_for_context(self, context: str):
+        topic_name, topic_id = self._resolve_topic(context)
+        if topic_id:
+            return get_or_create_graph(
+                topic_name,
+                base_dir=TOPICS_DIR / topic_id / "knowledge" / "graphs",
+                filename=f"{topic_id}_knowledge_graph.json",
+            )
+        return get_or_create_graph(topic_name, base_dir=KNOWLEDGE_DIR / "graphs", filename="self_learning_knowledge_graph.json")
+
+    def _sync_signal_to_graph(
+        self,
+        signal_type: str,
+        title: str,
+        content: str,
+        context: str,
+        score: int,
+        source_path: Path,
+        attributes: Optional[Dict] = None,
+    ) -> bool:
+        try:
+            graph = self._get_graph_for_context(context)
+            document = graph.upsert_entity(
+                name=source_path.stem,
+                entity_type="Document",
+                entity_id=f"document-{source_path.stem.lower().replace('_', '-')}",
+                description=f"学习信号来源：{source_path.name}",
+                summary=str(source_path),
+                attributes={"path": str(source_path), "kind": "self-learning"},
+                aliases=[str(source_path)],
+                layer="warm",
+                confidence=1.0,
+            )
+            entity = graph.add_learning_signal(signal_type, title, content, context, score=score)
+            entity.attributes.update(attributes or {})
+            entity.source_ids = sorted(set(entity.source_ids + [document.id]))
+            graph.add_relation(Relation(
+                from_id=document.id,
+                to_id=entity.id,
+                type="records",
+                evidence=content[:160],
+                status="EXTRACTED",
+                confidence=min(1.0, 0.5 + score * 0.1),
+                source_document=document.id,
+                extractor_version="self-learning-v3",
+            ))
+            graph.refresh_views()
+            return True
+        except Exception:
+            return False
     
     def learn_from_correction(self, context: str, reflection: str, lesson: str) -> bool:
         """
@@ -126,7 +280,21 @@ LESSON: {lesson}
         # 更新使用统计
         lesson_key = lesson[:50].lower()
         self.stats["corrections"][lesson_key] = self.stats["corrections"].get(lesson_key, 0) + 1
+        self._touch_signal_meta("corrections", lesson_key)
         self._save_stats()
+        self._sync_signal_to_graph(
+            signal_type="Lesson",
+            title=lesson,
+            content=f"REFLECTION: {reflection}\nLESSON: {lesson}",
+            context=context,
+            score=max(1, round(self._effective_signal_score("corrections", lesson_key))),
+            source_path=self.corrections_file,
+            attributes={
+                "reflection": reflection,
+                "kind": "correction",
+                "effective_score": self._effective_signal_score("corrections", lesson_key),
+            },
+        )
         
         # 检查是否需要晋升到 HOT
         self._check_promotion(lesson_key)
@@ -143,7 +311,21 @@ LESSON: {lesson}
         """
         pattern_key = pattern[:50].lower()
         self.stats["patterns"][pattern_key] = self.stats["patterns"].get(pattern_key, 0) + 1
+        self._touch_signal_meta("patterns", pattern_key)
         self._save_stats()
+        self._append_success_pattern(pattern, context, self.stats["patterns"][pattern_key])
+        self._sync_signal_to_graph(
+            signal_type="Pattern",
+            title=pattern,
+            content=f"PATTERN: {pattern}\nCONTEXT: {context}",
+            context=context,
+            score=max(1, round(self._effective_signal_score("patterns", pattern_key))),
+            source_path=self.memory_file,
+            attributes={
+                "kind": "success-pattern",
+                "effective_score": self._effective_signal_score("patterns", pattern_key),
+            },
+        )
         
         # 检查晋升
         self._check_promotion(pattern_key)
@@ -152,11 +334,10 @@ LESSON: {lesson}
     
     def _check_promotion(self, pattern_key: str):
         """检查是否需要晋升到 HOT memory"""
-        usage_count = self.stats["patterns"].get(pattern_key, 0)
-        corrections_count = self.stats["corrections"].get(pattern_key, 0)
+        usage_count = self._effective_signal_score("patterns", pattern_key)
+        corrections_count = self._effective_signal_score("corrections", pattern_key)
         total_count = usage_count + corrections_count
         
-        # 晋升规则：3次使用 + 7天内
         if total_count >= 3:
             last_promoted = self.stats["last_promoted"].get(pattern_key)
             if not last_promoted or (datetime.now() - datetime.fromisoformat(last_promoted)).days >= 7:
@@ -166,15 +347,28 @@ LESSON: {lesson}
     
     def _promote_to_hot(self, pattern_key: str):
         """晋升到 HOT memory"""
-        # 在 memory.md 中添加条目
         section = f"\n### 🔥 {pattern_key.title()}\n"
         section += f"验证次数：{self.stats['patterns'].get(pattern_key, 0)} 次\n"
+        section += f"当前有效分：{self._effective_signal_score('patterns', pattern_key) + self._effective_signal_score('corrections', pattern_key):.2f}\n"
         section += f"晋升日期：{datetime.now().strftime('%Y-%m-%d')}\n"
         
         # 避免重复添加
         if pattern_key.lower() not in self.memory_content.lower():
             self.memory_content += section
             self._save_memory()
+            self._sync_signal_to_graph(
+                signal_type="Pattern",
+                title=pattern_key.title(),
+                content=section.strip(),
+                context=pattern_key,
+                score=max(1, round(self._effective_signal_score('patterns', pattern_key) + self._effective_signal_score('corrections', pattern_key))),
+                source_path=self.memory_file,
+                attributes={
+                    "kind": "promotion",
+                    "promoted": True,
+                    "effective_score": self._effective_signal_score('patterns', pattern_key) + self._effective_signal_score('corrections', pattern_key),
+                },
+            )
             return True
         return False
     
@@ -265,19 +459,31 @@ LESSON: {lesson}
     
     def get_stats(self) -> Dict:
         """获取学习统计"""
+        effective_patterns = {
+            key: self._effective_signal_score("patterns", key)
+            for key in self.stats.get("patterns", {})
+        }
         return {
             "hot_entries": len([l for l in self.memory_content.split("\n") if l.startswith("###")]),
             "corrections_count": len([l for l in self.corrections_content.split("\n") if l.startswith("## 20")]),
             "patterns_tracked": len(self.stats.get("patterns", {})),
-            "patterns_promoted": len(self.stats.get("last_promoted", {}))
+            "patterns_promoted": len(self.stats.get("last_promoted", {})),
+            "patterns_active": len([key for key, score in effective_patterns.items() if score >= 1.5]),
+            "max_effective_pattern_score": max(effective_patterns.values(), default=0),
         }
     
     def should_apply_pattern(self, context: str) -> Optional[str]:
         """检查是否有适用的学习模式"""
         context_lower = context.lower()
         
-        for pattern_key, count in self.stats.get("patterns", {}).items():
-            if count >= 3 and pattern_key in context_lower:
+        ranked_patterns = sorted(
+            self.stats.get("patterns", {}).keys(),
+            key=lambda key: self._effective_signal_score("patterns", key),
+            reverse=True,
+        )
+        for pattern_key in ranked_patterns:
+            effective_score = self._effective_signal_score("patterns", pattern_key)
+            if effective_score >= 2.5 and pattern_key in context_lower:
                 return f"应用已验证模式：{pattern_key}"
         
         return None

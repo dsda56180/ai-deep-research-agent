@@ -52,3 +52,102 @@ Librarian Agent → 知识整理/IMA同步
 ---
 
 *持续更新中...*
+## 2026-04-09 新增洞察
+
+- [Diagnosing Retrieval vs. Utilization...] 核心方法：We introduce a diagnostic framework that analyzes how performance differences manifest across write strategies, retrieval methods, and memory utilization beh...
+
+## 2026-04-09 新增洞察
+
+- [Diagnosing Retrieval vs. Utilization...] 创新点：We introduce a diagnostic framework that analyzes how performance differences manifest across write strategies, retrieval methods, and memory utilization beh...
+
+## 2026-04-09 新增洞察
+
+- [Diagnosing Retrieval vs. Utilization...] 创新点：Raw chunked storage, which requires zero LLM calls, matches or outperforms expensive lossy alternatives, suggesting that current memory pipelines may discard...
+
+## 2026-04-13 新增洞察
+
+- [Semantic Rate-Distortion for Bounded...] 核心方法：When two agents of different computational capacities interact with the same environment, they need not compress a common semantic alphabet differently; they...
+
+## 2026-04-13 新增洞察
+
+- [Multi-Agent Decision-Focused Learning...] 核心方法：While recent methods optimize messages for intermediate objectives (e.g., reconstruction accuracy or mutual information), rather than decision quality, we in...
+
+## 2026-04-13 新增洞察
+
+- [Multi-Agent Decision-Focused Learning...] 创新点：While recent methods optimize messages for intermediate objectives (e.g., reconstruction accuracy or mutual information), rather than decision quality, we in...
+
+## 2026-04-13 新增洞察
+
+- [Wireless Communication Enhanced Value...] 核心方法：Cooperation in multi-agent reinforcement learning (MARL) benefits from inter-agent communication, yet most approaches assume idealized channels and existing...
+
+## 2026-04-13 新增洞察
+
+- [Wireless Communication Enhanced Value...] 创新点：We propose CLOVER, a cooperative MARL framework whose centralized value mixer is conditioned on the communication graph realized under a realistic wireless c...
+
+## 2026-04-13 新增洞察
+
+- [Wireless Communication Enhanced Value...] 创新点：This graph introduces a relational inductive bias into value decomposition, constraining how individual utilities are mixed based on the realized communicati...
+
+## 2026-04-13 新增洞察
+
+- [Every Response Counts: Quantifying Un...] 核心方法：While Large Language Model-based Multi-Agent Systems (MAS) consistently outperform single-agent systems on complex tasks, their intricate interactions introd...
+
+## 2026-04-13 新增洞察
+
+- [Every Response Counts: Quantifying Un...] 创新点：While Large Language Model-based Multi-Agent Systems (MAS) consistently outperform single-agent systems on complex tasks, their intricate interactions introd...
+
+## 2026-04-13 新增洞察
+
+- [Every Response Counts: Quantifying Un...] 创新点：To bridge this gap, we introduce MATU, a novel framework that quantifies uncertainty through tensor decomposition.
+
+## 2026-04-13 新增洞察
+
+- ["Theater of Mind" for LLMs: A Cogniti...] 核心方法："Theater of Mind" for LLMs: A Cognitive Architecture Based on Global Workspace Theory.
+
+## 2026-04-13 新增洞察
+
+- ["Theater of Mind" for LLMs: A Cogniti...] 创新点：To address this structural limitation, we propose Global Workspace Agents (GWA), a cognitive architecture inspired by Global Workspace Theory.
+
+## 2026-04-13 新增洞察
+
+- ["Theater of Mind" for LLMs: A Cogniti...] 创新点：Furthermore, we introduce an entropy-based intrinsic drive mechanism that mathematically quantifies semantic diversity, dynamically regulating generation tem...
+
+## 2026-04-13 新增洞察
+
+- [DiffuMask: Diffusion Language Model f...] 核心方法：DiffuMask: Diffusion Language Model for Token-level Prompt Pruning.
+
+## 2026-04-13 新增洞察
+
+- [Prompt Compression in the Wild: Measu...] 核心方法：With the wide adoption of language models for IR -- and specifically RAG systems -- the latency of the underlying LLM becomes a crucial bottleneck, since the...
+
+## 2026-04-13 新增洞察
+
+- [Prompt Compression in the Wild: Measu...] 创新点：We present the first systematic, large-scale study of this trade-off, with thousands of runs and 30,000 queries across several open-source LLMs and three GPU...
+
+## 2026-04-13 新增洞察
+
+- [Distributionally Robust Token Optimiz...] 核心方法：Large Language Models (LLMs) tend to respond correctly to prompts that align to the data they were trained and fine-tuned on.
+
+## 2026-04-13 新增洞察
+
+- [Distributionally Robust Token Optimiz...] 创新点：To address this problem, we propose a Distributionally Robust Token Optimization (DRTO) approach, which combines token-level Reinforcement Learning from Huma...
+
+## 2026-04-13 新增洞察
+
+- [Large Language Model as Token Compres...] 核心方法：Large Language Model as Token Compressor and Decompressor.
+
+## 2026-04-13 新增洞察
+
+- [Large Language Model as Token Compres...] 创新点：In this paper, we establish the novel insight that an off-the-shelf LLM can function as an excellent token compressor and decompressor.
+
+## 2026-04-13 新增洞察
+
+- [Towards Real-World Document Parsing v...] 核心方法：Document parsing has recently advanced with multimodal large language models (MLLMs) that directly map document images to structured outputs.
+
+## 2026-04-13 新增洞察
+
+- [Towards Real-World Document Parsing v...] 创新点：To address these challenges, we propose a data-training co-design framework for robust end-to-end document parsing.
+
+## 2026-04-13 新增洞察
+
+- [Towards Real-World Document Parsing v...] 创新点：A Realistic Scene Synthesis strategy constructs large-scale, structurally diverse full-page end-to-end supervision by composing layout templates with rich do...

@@ -1,37 +1,2741 @@
 {
-  "updated": "2026-04-14T10:05:41.950066",
+  "updated": "2026-04-13T14:05:50.606838",
   "topics": [
     {
       "id": "agent-token优化",
       "name": "Agent Token优化",
-      "concept_count": 0,
-      "relation_count": 0,
+      "concept_count": 95,
+      "relation_count": 221,
       "paper_count": 0,
-      "last_updated": "2026-04-07T12:12:06.121824"
+      "entity_count": 111,
+      "community_count": 25,
+      "last_updated": "2026-04-13T14:05:50.491419"
     },
     {
       "id": "ai-agent-memory",
-      "name": "ai-agent-memory",
-      "concept_count": 28,
-      "relation_count": 29,
-      "paper_count": 16,
-      "last_updated": "2026-04-07T10:40:28.424594"
+      "name": "AI Agent 记忆系统",
+      "concept_count": 211,
+      "relation_count": 801,
+      "paper_count": 0,
+      "entity_count": 242,
+      "community_count": 4,
+      "last_updated": "2026-04-13T14:05:50.566111"
     },
     {
       "id": "多智能体协作系统",
       "name": "多智能体协作系统",
-      "concept_count": 0,
-      "relation_count": 0,
+      "concept_count": 93,
+      "relation_count": 217,
       "paper_count": 0,
-      "last_updated": "2026-04-07T12:04:44.615382"
+      "entity_count": 110,
+      "community_count": 26,
+      "last_updated": "2026-04-13T14:05:50.604783"
     }
   ],
-  "global_concepts": [],
-  "cross_topic_relations": [],
+  "global_concepts": [
+    {
+      "id": "concept-ai-agent-记忆系统深度研究报告-2026-04-07",
+      "name": "AI Agent 记忆系统深度研究报告 — 2026-04-07",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-3",
+        "多智能体协作系统": "community-3"
+      }
+    },
+    {
+      "id": "concept-核心论文解读",
+      "name": "📖 核心论文解读",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-论文1-memgpt-towards-llms-as-operating-systems",
+      "name": "论文1：MemGPT: Towards LLMs as Operating Systems",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-论文2-zep-a-temporal-knowledge-graph-architecture-for-agent-memory",
+      "name": "论文2：Zep: A Temporal Knowledge Graph Architecture for Agent Memory",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-2",
+        "多智能体协作系统": "community-3"
+      }
+    },
+    {
+      "id": "concept-论文3-meminsight-autonomous-memory-augmentation-for-llm-agents",
+      "name": "论文3：MemInsight: Autonomous Memory Augmentation for LLM Agents",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-3",
+        "多智能体协作系统": "community-3"
+      }
+    },
+    {
+      "id": "concept-论文4-omni-simplemem-autoresearch-guided-discovery-of-lifelong-multimodal-agent-memory",
+      "name": "论文4：Omni-SimpleMem: Autoresearch-Guided Discovery of Lifelong Multimodal Agent Memory",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-3",
+        "多智能体协作系统": "community-3"
+      }
+    },
+    {
+      "id": "concept-论文5-memfactory-unified-inference-training-framework-for-agent-memory",
+      "name": "论文5：MemFactory: Unified Inference & Training Framework for Agent Memory",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-3",
+        "多智能体协作系统": "community-3"
+      }
+    },
+    {
+      "id": "concept-综合分析",
+      "name": "🔍 综合分析",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-5",
+        "多智能体协作系统": "community-5"
+      }
+    },
+    {
+      "id": "concept-领域现状",
+      "name": "领域现状",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-趋势预测",
+      "name": "趋势预测",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-7",
+        "多智能体协作系统": "community-7"
+      }
+    },
+    {
+      "id": "concept-实践建议",
+      "name": "实践建议",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-3",
+        "多智能体协作系统": "community-3"
+      }
+    },
+    {
+      "id": "concept-参考文献",
+      "name": "📚 参考文献",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-3",
+        "多智能体协作系统": "community-3"
+      }
+    },
+    {
+      "id": "system-ai-agent",
+      "name": "AI Agent",
+      "type": "system",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "AI Agent",
+        "ai-agent-memory": "AI Agent",
+        "多智能体协作系统": "AI Agent"
+      },
+      "communities": {
+        "agent-token优化": "community-2",
+        "ai-agent-memory": "community-3",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-memgpt",
+      "name": "MemGPT",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "MemGPT",
+        "多智能体协作系统": "MemGPT"
+      },
+      "communities": {
+        "agent-token优化": "community-5",
+        "多智能体协作系统": "community-5"
+      }
+    },
+    {
+      "id": "concept-towards-llms",
+      "name": "Towards LLMs",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Towards LLMs",
+        "ai-agent-memory": "Towards LLMs",
+        "多智能体协作系统": "Towards LLMs"
+      },
+      "communities": {
+        "agent-token优化": "community-2",
+        "ai-agent-memory": "community-1",
+        "多智能体协作系统": "community-3"
+      }
+    },
+    {
+      "id": "system-operating-systems",
+      "name": "Operating Systems",
+      "type": "system",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Operating Systems",
+        "ai-agent-memory": "Operating Systems",
+        "多智能体协作系统": "Operating Systems"
+      },
+      "communities": {
+        "agent-token优化": "community-9",
+        "ai-agent-memory": "community-1",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-charles-packer",
+      "name": "Charles Packer",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Charles Packer",
+        "ai-agent-memory": "Charles Packer",
+        "多智能体协作系统": "Charles Packer"
+      },
+      "communities": {
+        "agent-token优化": "community-10",
+        "ai-agent-memory": "community-1",
+        "多智能体协作系统": "community-11"
+      }
+    },
+    {
+      "id": "concept-sarah-wooders",
+      "name": "Sarah Wooders",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Sarah Wooders",
+        "ai-agent-memory": "Sarah Wooders",
+        "多智能体协作系统": "Sarah Wooders"
+      },
+      "communities": {
+        "agent-token优化": "community-3",
+        "ai-agent-memory": "community-2",
+        "多智能体协作系统": "community-10"
+      }
+    },
+    {
+      "id": "concept-kevin-lin",
+      "name": "Kevin Lin",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Kevin Lin",
+        "ai-agent-memory": "Kevin Lin",
+        "多智能体协作系统": "Kevin Lin"
+      },
+      "communities": {
+        "agent-token优化": "community-3",
+        "ai-agent-memory": "community-3",
+        "多智能体协作系统": "community-3"
+      }
+    },
+    {
+      "id": "concept-vivian-fang",
+      "name": "Vivian Fang",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Vivian Fang",
+        "ai-agent-memory": "Vivian Fang",
+        "多智能体协作系统": "Vivian Fang"
+      },
+      "communities": {
+        "agent-token优化": "community-3",
+        "ai-agent-memory": "community-3",
+        "多智能体协作系统": "community-9"
+      }
+    },
+    {
+      "id": "concept-shishir",
+      "name": "Shishir",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Shishir",
+        "ai-agent-memory": "Shishir",
+        "多智能体协作系统": "Shishir"
+      },
+      "communities": {
+        "agent-token优化": "community-8",
+        "ai-agent-memory": "community-3",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-patil",
+      "name": "Patil",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Patil",
+        "ai-agent-memory": "Patil",
+        "多智能体协作系统": "Patil"
+      },
+      "communities": {
+        "agent-token优化": "community-2",
+        "ai-agent-memory": "community-2",
+        "多智能体协作系统": "community-3"
+      }
+    },
+    {
+      "id": "concept-ion-stoica",
+      "name": "Ion Stoica",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Ion Stoica",
+        "ai-agent-memory": "Ion Stoica",
+        "多智能体协作系统": "Ion Stoica"
+      },
+      "communities": {
+        "agent-token优化": "community-2",
+        "ai-agent-memory": "community-2",
+        "多智能体协作系统": "community-3"
+      }
+    },
+    {
+      "id": "concept-joseph",
+      "name": "Joseph",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Joseph",
+        "ai-agent-memory": "Joseph",
+        "多智能体协作系统": "Joseph"
+      },
+      "communities": {
+        "agent-token优化": "community-2",
+        "ai-agent-memory": "community-3",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-gonzalez",
+      "name": "Gonzalez",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Gonzalez",
+        "ai-agent-memory": "Gonzalez",
+        "多智能体协作系统": "Gonzalez"
+      },
+      "communities": {
+        "agent-token优化": "community-3",
+        "ai-agent-memory": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-main-context",
+      "name": "Main Context",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Main Context",
+        "ai-agent-memory": "Main Context",
+        "多智能体协作系统": "Main Context"
+      },
+      "communities": {
+        "agent-token优化": "community-3",
+        "ai-agent-memory": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-external-context",
+      "name": "External Context",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "External Context",
+        "ai-agent-memory": "External Context",
+        "多智能体协作系统": "External Context"
+      },
+      "communities": {
+        "agent-token优化": "community-2",
+        "ai-agent-memory": "community-2",
+        "多智能体协作系统": "community-3"
+      }
+    },
+    {
+      "id": "system-temporal-knowledge-graph-architecture",
+      "name": "Temporal Knowledge Graph Architecture",
+      "type": "system",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Temporal Knowledge Graph Architecture",
+        "ai-agent-memory": "Temporal Knowledge Graph Architecture",
+        "多智能体协作系统": "Temporal Knowledge Graph Architecture"
+      },
+      "communities": {
+        "agent-token优化": "community-3",
+        "ai-agent-memory": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "system-agent-memory",
+      "name": "Agent Memory",
+      "type": "system",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Agent Memory",
+        "ai-agent-memory": "Agent Memory",
+        "多智能体协作系统": "Agent Memory"
+      },
+      "communities": {
+        "agent-token优化": "community-3",
+        "ai-agent-memory": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-preston-rasmussen",
+      "name": "Preston Rasmussen",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Preston Rasmussen",
+        "ai-agent-memory": "Preston Rasmussen",
+        "多智能体协作系统": "Preston Rasmussen"
+      },
+      "communities": {
+        "agent-token优化": "community-2",
+        "ai-agent-memory": "community-2",
+        "多智能体协作系统": "community-3"
+      }
+    },
+    {
+      "id": "concept-研究问题",
+      "name": "📋 研究问题",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-5",
+        "多智能体协作系统": "community-5"
+      }
+    },
+    {
+      "id": "concept-核心论文-系统解读",
+      "name": "📖 核心论文/系统解读",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-系统-1-memgpt-将-llm-视为操作系统",
+      "name": "系统 1：MemGPT — 将 LLM 视为操作系统",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-系统-2-letta-memgpt-的进化形态",
+      "name": "系统 2：Letta — MemGPT 的进化形态",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-letta-agent-配置示例",
+      "name": "Letta Agent 配置示例",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-12",
+        "多智能体协作系统": "community-12"
+      }
+    },
+    {
+      "id": "concept-系统-3-langchain-memory-体系",
+      "name": "系统 3：LangChain Memory 体系",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-系统-4-redis-ai-agent-memory",
+      "name": "系统 4：Redis AI Agent Memory",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-记忆系统架构对比",
+      "name": "记忆系统架构对比",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-技术趋势分析",
+      "name": "技术趋势分析",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-核心挑战与解决方案",
+      "name": "核心挑战与解决方案",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-知识图谱更新",
+      "name": "📚 知识图谱更新",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-新增概念",
+      "name": "新增概念",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-关系网络",
+      "name": "关系网络",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-短期-6-12个月",
+      "name": "短期（6-12个月）",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-中期-1-2年",
+      "name": "中期（1-2年）",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-长期-2-5年",
+      "name": "长期（2-5年）",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-研究建议",
+      "name": "💡 研究建议",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "system-agent",
+      "name": "Agent",
+      "type": "system",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Agent",
+        "ai-agent-memory": "Agent",
+        "多智能体协作系统": "Agent"
+      },
+      "communities": {
+        "agent-token优化": "community-25",
+        "ai-agent-memory": "community-1",
+        "多智能体协作系统": "community-26"
+      }
+    },
+    {
+      "id": "concept-ai-agent-记忆系统-深度研究报告-2026-04-03-第2次研究",
+      "name": "AI Agent 记忆系统 深度研究报告 — 2026-04-03（第2次研究）",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-13",
+        "多智能体协作系统": "community-13"
+      }
+    },
+    {
+      "id": "concept-核心论文-系统深度解读",
+      "name": "📖 核心论文/系统深度解读",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-论文-1-mem0-可扩展生产级-agent-记忆系统",
+      "name": "论文 1：Mem0 — 可扩展生产级 Agent 记忆系统",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-论文-2-memgen-生成式潜在记忆",
+      "name": "论文 2：MemGen — 生成式潜在记忆",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-论文-3-continuum-memory-architecture-cma-连续记忆架构",
+      "name": "论文 3：Continuum Memory Architecture (CMA) — 连续记忆架构",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-论文-4-preference-aware-memory-update-pamu",
+      "name": "论文 4：Preference-Aware Memory Update (PAMU)",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-论文-5-multi-agent-memory-计算机架构视角",
+      "name": "论文 5：Multi-Agent Memory — 计算机架构视角",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-论文-6-evaluating-memory-structure-in-llm-agents-structmemeval",
+      "name": "论文 6：Evaluating Memory Structure in LLM Agents (StructMemEval)",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-论文-7-gam-rag-增益自适应记忆-rag",
+      "name": "论文 7：GAM-RAG — 增益自适应记忆 RAG",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-论文-8-hierarchical-memory-tree-hmt-web-agent-分层记忆树",
+      "name": "论文 8：Hierarchical Memory Tree (HMT) — Web Agent 分层记忆树",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-论文-9-infrastructure-for-tradable-agent-memory",
+      "name": "论文 9：Infrastructure for Tradable Agent Memory",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-论文-10-emembench-情景记忆评估基准",
+      "name": "论文 10：EMemBench — 情景记忆评估基准",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-领域现状-2026年记忆系统格局",
+      "name": "领域现状：2026年记忆系统格局",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-核心技术趋势",
+      "name": "核心技术趋势",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-新增知识图谱概念",
+      "name": "新增知识图谱概念",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-知识缺口更新-相比上次研究新增",
+      "name": "🔴 知识缺口更新（相比上次研究新增）",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-已验证-部分解决的缺口",
+      "name": "已验证/部分解决的缺口",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-新增高优先级缺口",
+      "name": "新增高优先级缺口",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-mem0",
+      "name": "Mem0",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Mem0",
+        "多智能体协作系统": "Mem0"
+      },
+      "communities": {
+        "agent-token优化": "community-19",
+        "多智能体协作系统": "community-20"
+      }
+    },
+    {
+      "id": "concept-mem0-team",
+      "name": "Mem0 Team",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Mem0 Team",
+        "ai-agent-memory": "Mem0 Team",
+        "多智能体协作系统": "Mem0 Team"
+      },
+      "communities": {
+        "agent-token优化": "community-18",
+        "ai-agent-memory": "community-2",
+        "多智能体协作系统": "community-19"
+      }
+    },
+    {
+      "id": "concept-locomo",
+      "name": "LOCOMO",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "LOCOMO",
+        "ai-agent-memory": "LOCOMO",
+        "多智能体协作系统": "LOCOMO"
+      },
+      "communities": {
+        "agent-token优化": "community-20",
+        "ai-agent-memory": "community-4",
+        "多智能体协作系统": "community-21"
+      }
+    },
+    {
+      "id": "system-memory-centric-architecture",
+      "name": "Memory-Centric Architecture",
+      "type": "system",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Memory-Centric Architecture",
+        "ai-agent-memory": "Memory-Centric Architecture",
+        "多智能体协作系统": "Memory-Centric Architecture"
+      },
+      "communities": {
+        "agent-token优化": "community-17",
+        "ai-agent-memory": "community-1",
+        "多智能体协作系统": "community-18"
+      }
+    },
+    {
+      "id": "concept-conversational",
+      "name": "Conversational",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Conversational",
+        "ai-agent-memory": "Conversational",
+        "多智能体协作系统": "Conversational"
+      },
+      "communities": {
+        "agent-token优化": "community-23",
+        "ai-agent-memory": "community-1",
+        "多智能体协作系统": "community-24"
+      }
+    },
+    {
+      "id": "concept-user-prefs",
+      "name": "User Prefs",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "User Prefs",
+        "ai-agent-memory": "User Prefs",
+        "多智能体协作系统": "User Prefs"
+      },
+      "communities": {
+        "agent-token优化": "community-16",
+        "ai-agent-memory": "community-1",
+        "多智能体协作系统": "community-17"
+      }
+    },
+    {
+      "id": "concept-entities",
+      "name": "Entities",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Entities",
+        "ai-agent-memory": "Entities",
+        "多智能体协作系统": "Entities"
+      },
+      "communities": {
+        "agent-token优化": "community-21",
+        "ai-agent-memory": "community-1",
+        "多智能体协作系统": "community-22"
+      }
+    },
+    {
+      "id": "method-memory",
+      "name": "Memory",
+      "type": "method",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "学习信号来源：memory.md",
+        "多智能体协作系统": "学习信号来源：memory.md"
+      },
+      "communities": {
+        "agent-token优化": "community-11",
+        "多智能体协作系统": "community-8"
+      }
+    },
+    {
+      "id": "concept-论文-2-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory",
+      "name": "论文 2：Mem0 — Building Production-Ready AI Agents with Scalable Long-Term Memory",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-论文-4-himem-hierarchical-long-term-memory-for-llm-long-horizon-agents",
+      "name": "论文 4：HiMem — Hierarchical Long-Term Memory for LLM Long-Horizon Agents",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-论文-5-gaama-graph-augmented-associative-memory-for-agents",
+      "name": "论文 5：GAAMA — Graph Augmented Associative Memory for Agents",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-主流技术方向对比",
+      "name": "主流技术方向对比",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-关键研究缺口",
+      "name": "关键研究缺口",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-2",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-核心论文",
+      "name": "核心论文",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-2",
+        "多智能体协作系统": "community-2"
+      }
+    },
+    {
+      "id": "concept-相关资源",
+      "name": "相关资源",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-1",
+        "多智能体协作系统": "community-1"
+      }
+    },
+    {
+      "id": "concept-2026年最新研究",
+      "name": "2026年最新研究",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-14",
+        "多智能体协作系统": "community-14"
+      }
+    },
+    {
+      "id": "concept-xingchen-wan",
+      "name": "Xingchen Wan",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Xingchen Wan",
+        "ai-agent-memory": "Xingchen Wan",
+        "多智能体协作系统": "Xingchen Wan"
+      },
+      "communities": {
+        "agent-token优化": "community-1",
+        "ai-agent-memory": "community-3",
+        "多智能体协作系统": "community-16"
+      }
+    },
+    {
+      "id": "concept-daniel-pressman",
+      "name": "Daniel Pressman",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Daniel Pressman",
+        "ai-agent-memory": "Daniel Pressman",
+        "多智能体协作系统": "Daniel Pressman"
+      },
+      "communities": {
+        "agent-token优化": "community-22",
+        "ai-agent-memory": "community-3",
+        "多智能体协作系统": "community-23"
+      }
+    },
+    {
+      "id": "concept-bryan",
+      "name": "Bryan",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Bryan",
+        "ai-agent-memory": "Bryan",
+        "多智能体协作系统": "Bryan"
+      },
+      "communities": {
+        "agent-token优化": "community-24",
+        "ai-agent-memory": "community-3",
+        "多智能体协作系统": "community-25"
+      }
+    },
+    {
+      "id": "concept-论文-1-待搜索填充",
+      "name": "论文 1：[待搜索填充]",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-5",
+        "多智能体协作系统": "community-5"
+      }
+    },
+    {
+      "id": "concept-知识缺口",
+      "name": "知识缺口",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "definitions": {},
+      "communities": {
+        "agent-token优化": "community-5",
+        "多智能体协作系统": "community-5"
+      }
+    },
+    {
+      "id": "concept-papers",
+      "name": "Papers",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Papers",
+        "ai-agent-memory": "Papers",
+        "多智能体协作系统": "Papers"
+      },
+      "communities": {
+        "agent-token优化": "community-5",
+        "ai-agent-memory": "community-1",
+        "多智能体协作系统": "community-5"
+      }
+    },
+    {
+      "id": "concept-code",
+      "name": "Code",
+      "type": "concept",
+      "appears_in": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "definitions": {
+        "agent-token优化": "Code",
+        "ai-agent-memory": "Code",
+        "多智能体协作系统": "Code"
+      },
+      "communities": {
+        "agent-token优化": "community-5",
+        "ai-agent-memory": "community-1",
+        "多智能体协作系统": "community-5"
+      }
+    }
+  ],
+  "cross_topic_relations": [
+    {
+      "type": "shared_concept",
+      "concept": "AI Agent 记忆系统深度研究报告 — 2026-04-07",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "📖 核心论文解读",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文1：MemGPT: Towards LLMs as Operating Systems",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文2：Zep: A Temporal Knowledge Graph Architecture for Agent Memory",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文3：MemInsight: Autonomous Memory Augmentation for LLM Agents",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文4：Omni-SimpleMem: Autoresearch-Guided Discovery of Lifelong Multimodal Agent Memory",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文5：MemFactory: Unified Inference & Training Framework for Agent Memory",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "🔍 综合分析",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "领域现状",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "趋势预测",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "实践建议",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "📚 参考文献",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "AI Agent",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "AI Agent",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "AI Agent",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "MemGPT",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Towards LLMs",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Towards LLMs",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Towards LLMs",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Operating Systems",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Operating Systems",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Operating Systems",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Charles Packer",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Charles Packer",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Charles Packer",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Sarah Wooders",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Sarah Wooders",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Sarah Wooders",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Kevin Lin",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Kevin Lin",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Kevin Lin",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Vivian Fang",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Vivian Fang",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Vivian Fang",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Shishir",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Shishir",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Shishir",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Patil",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Patil",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Patil",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Ion Stoica",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Ion Stoica",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Ion Stoica",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Joseph",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Joseph",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Joseph",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Gonzalez",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Gonzalez",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Gonzalez",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Main Context",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Main Context",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Main Context",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "External Context",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "External Context",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "External Context",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Temporal Knowledge Graph Architecture",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Temporal Knowledge Graph Architecture",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Temporal Knowledge Graph Architecture",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Agent Memory",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Agent Memory",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Agent Memory",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Preston Rasmussen",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Preston Rasmussen",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Preston Rasmussen",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "📋 研究问题",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "📖 核心论文/系统解读",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "系统 1：MemGPT — 将 LLM 视为操作系统",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "系统 2：Letta — MemGPT 的进化形态",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Letta Agent 配置示例",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "系统 3：LangChain Memory 体系",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "系统 4：Redis AI Agent Memory",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "记忆系统架构对比",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "技术趋势分析",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "核心挑战与解决方案",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "📚 知识图谱更新",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "新增概念",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "关系网络",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "短期（6-12个月）",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "中期（1-2年）",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "长期（2-5年）",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "💡 研究建议",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Agent",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Agent",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Agent",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "AI Agent 记忆系统 深度研究报告 — 2026-04-03（第2次研究）",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "📖 核心论文/系统深度解读",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文 1：Mem0 — 可扩展生产级 Agent 记忆系统",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文 2：MemGen — 生成式潜在记忆",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文 3：Continuum Memory Architecture (CMA) — 连续记忆架构",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文 4：Preference-Aware Memory Update (PAMU)",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文 5：Multi-Agent Memory — 计算机架构视角",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文 6：Evaluating Memory Structure in LLM Agents (StructMemEval)",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文 7：GAM-RAG — 增益自适应记忆 RAG",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文 8：Hierarchical Memory Tree (HMT) — Web Agent 分层记忆树",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文 9：Infrastructure for Tradable Agent Memory",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文 10：EMemBench — 情景记忆评估基准",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "领域现状：2026年记忆系统格局",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "核心技术趋势",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "新增知识图谱概念",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "🔴 知识缺口更新（相比上次研究新增）",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "已验证/部分解决的缺口",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "新增高优先级缺口",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Mem0",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Mem0 Team",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Mem0 Team",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Mem0 Team",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "LOCOMO",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "LOCOMO",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "LOCOMO",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Memory-Centric Architecture",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Memory-Centric Architecture",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Memory-Centric Architecture",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Conversational",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Conversational",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Conversational",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "User Prefs",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "User Prefs",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "User Prefs",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Entities",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Entities",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Entities",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Memory",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文 2：Mem0 — Building Production-Ready AI Agents with Scalable Long-Term Memory",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文 4：HiMem — Hierarchical Long-Term Memory for LLM Long-Horizon Agents",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文 5：GAAMA — Graph Augmented Associative Memory for Agents",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "主流技术方向对比",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "关键研究缺口",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "核心论文",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "相关资源",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "2026年最新研究",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Xingchen Wan",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Xingchen Wan",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Xingchen Wan",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Daniel Pressman",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Daniel Pressman",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Daniel Pressman",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Bryan",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Bryan",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Bryan",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "论文 1：[待搜索填充]",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "知识缺口",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "medium",
+      "shared_count": 2
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Papers",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Papers",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Papers",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Code",
+      "topic_1": "agent-token优化",
+      "topic_2": "ai-agent-memory",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Code",
+      "topic_1": "agent-token优化",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    },
+    {
+      "type": "shared_concept",
+      "concept": "Code",
+      "topic_1": "ai-agent-memory",
+      "topic_2": "多智能体协作系统",
+      "significance": "high",
+      "shared_count": 3
+    }
+  ],
   "statistics": {
     "total_topics": 3,
-    "total_concepts": 28,
-    "total_relations": 29,
-    "shared_concepts": 0
+    "total_concepts": 281,
+    "total_relations": 1239,
+    "shared_concepts": 89,
+    "avg_entities_per_topic": 154.33
+  },
+  "topic_stats": {
+    "agent-token优化": {
+      "topic": "Agent Token优化",
+      "entities": 111,
+      "edges": 221,
+      "communities": 25,
+      "documents": 4,
+      "papers": 0,
+      "layers": {
+        "hot": 111
+      },
+      "entity_types": {
+        "Document": 4,
+        "system": 7,
+        "concept": 87,
+        "Methodology": 3,
+        "Gap": 5,
+        "CommunitySummary": 1,
+        "method": 1,
+        "Claim": 1,
+        "Pattern": 1,
+        "ResearchSession": 1
+      },
+      "confidence": {
+        "EXTRACTED": 135,
+        "INFERRED": 86
+      },
+      "avg_weighted_degree": 1.99,
+      "updated": "2026-04-13T14:05:50.491419"
+    },
+    "ai-agent-memory": {
+      "topic": "AI Agent 记忆系统",
+      "entities": 242,
+      "edges": 801,
+      "communities": 4,
+      "documents": 12,
+      "papers": 0,
+      "layers": {
+        "hot": 242
+      },
+      "entity_types": {
+        "system": 22,
+        "concept": 175,
+        "method": 12,
+        "dataset": 2,
+        "CommunitySummary": 10,
+        "Document": 12,
+        "Claim": 4,
+        "Lesson": 1,
+        "ResearchSession": 1,
+        "Pattern": 1,
+        "Gap": 2
+      },
+      "confidence": {
+        "EXTRACTED": 308,
+        "INFERRED": 493
+      },
+      "avg_weighted_degree": 3.1,
+      "updated": "2026-04-13T14:05:50.566111"
+    },
+    "多智能体协作系统": {
+      "topic": "多智能体协作系统",
+      "entities": 110,
+      "edges": 217,
+      "communities": 26,
+      "documents": 4,
+      "papers": 0,
+      "layers": {
+        "hot": 110
+      },
+      "entity_types": {
+        "Document": 4,
+        "system": 7,
+        "concept": 85,
+        "Methodology": 3,
+        "Gap": 6,
+        "CommunitySummary": 1,
+        "method": 1,
+        "Claim": 1,
+        "Pattern": 1,
+        "ResearchSession": 1
+      },
+      "confidence": {
+        "EXTRACTED": 131,
+        "INFERRED": 86
+      },
+      "avg_weighted_degree": 1.95,
+      "updated": "2026-04-13T14:05:50.604783"
+    }
   }
 }

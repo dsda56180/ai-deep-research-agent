@@ -137,3 +137,135 @@
 ---
 
 *最后更新：2026-04-03*
+
+## 2026-04-09 新发现缺口
+
+### 🟡 Diagnosing Retrieval vs. Utilization Bottleneck...
+
+**问题**：Memory-augmented LLM agents store and retrieve information from prior interactions, yet the relative importance of how memories are written versus how they are retrieved remains...
+**来源**：2603.02473v1
+**优先级**：medium
+
+
+## 2026-04-09 新发现缺口
+
+### 🟡 Diagnosing Retrieval vs. Utilization Bottleneck...
+
+**问题**：Memory-augmented LLM agents store and retrieve information from prior interactions, yet the relative importance of how memories are written versus how they are retrieved remains...
+**来源**：2603.02473v1
+**优先级**：medium
+
+
+## 2026-04-13 新发现缺口
+
+### 🟡 Multi-Agent Decision-Focused Learning via Value...
+
+**问题**：On collaborative healthcare and StarCraft Multi-Agent Challenge (SMAC) benchmarks, SeqComm-DFL achieves four to six times higher cumulative rewards and over 13\% win rate improv...
+**来源**：2604.08944v1
+**优先级**：medium
+
+### 🔴 Every Response Counts: Quantifying Uncertainty...
+
+**问题**：While Large Language Model-based Multi-Agent Systems (MAS) consistently outperform single-agent systems on complex tasks, their intricate interactions introduce critical reliabi...
+**来源**：2604.08708v1
+**优先级**：high
+
+### 🟡 Every Response Counts: Quantifying Uncertainty...
+
+**问题**：Specifically, these methods struggle with three distinct challenges: the cascading uncertainty in multi-step reasoning, the variability of inter-agent communication paths, and t...
+**来源**：2604.08708v1
+**优先级**：medium
+
+### 🔴 "Theater of Mind" for LLMs: A Cognitive Archite...
+
+**问题**：While effective for isolated tasks, this reactive paradigm presents a critical bottleneck for engineering autonomous artificial intelligence.
+**来源**：2604.08206v1
+**优先级**：high
+
+### 🟡 "Theater of Mind" for LLMs: A Cognitive Archite...
+
+**问题**：To address this structural limitation, we propose Global Workspace Agents (GWA), a cognitive architecture inspired by Global Workspace Theory.
+**来源**：2604.08206v1
+**优先级**：medium
+
+
+## 2026-04-13 新发现缺口
+
+### 🟡 Prompt Compression in the Wild: Measuring Laten...
+
+**问题**：With the wide adoption of language models for IR -- and specifically RAG systems -- the latency of the underlying LLM becomes a crucial bottleneck, since the long contexts of re...
+**来源**：2604.02985v1
+**优先级**：medium
+
+### 🔴 Towards Real-World Document Parsing via Realist...
+
+**问题**：To address these challenges, we propose a data-training co-design framework for robust end-to-end document parsing.
+**来源**：2603.23885v2
+**优先级**：high
+
+
+## 2026-04-13 新发现缺口
+
+### 🟡 Multi-Agent Decision-Focused Learning via Value...
+
+**问题**：On collaborative healthcare and StarCraft Multi-Agent Challenge (SMAC) benchmarks, SeqComm-DFL achieves four to six times higher cumulative rewards and over 13\% win rate improv...
+**来源**：2604.08944v1
+**优先级**：medium
+
+### 🔴 Every Response Counts: Quantifying Uncertainty...
+
+**问题**：While Large Language Model-based Multi-Agent Systems (MAS) consistently outperform single-agent systems on complex tasks, their intricate interactions introduce critical reliabi...
+**来源**：2604.08708v1
+**优先级**：high
+
+### 🟡 Every Response Counts: Quantifying Uncertainty...
+
+**问题**：Specifically, these methods struggle with three distinct challenges: the cascading uncertainty in multi-step reasoning, the variability of inter-agent communication paths, and t...
+**来源**：2604.08708v1
+**优先级**：medium
+
+### 🔴 "Theater of Mind" for LLMs: A Cognitive Archite...
+
+**问题**：While effective for isolated tasks, this reactive paradigm presents a critical bottleneck for engineering autonomous artificial intelligence.
+**来源**：2604.08206v1
+**优先级**：high
+
+### 🟡 "Theater of Mind" for LLMs: A Cognitive Archite...
+
+**问题**：To address this structural limitation, we propose Global Workspace Agents (GWA), a cognitive architecture inspired by Global Workspace Theory.
+**来源**：2604.08206v1
+**优先级**：medium
+
+
+## 2026-04-13 新发现缺口
+
+### 🟡 Multi-Agent Decision-Focused Learning via Value...
+
+**问题**：On collaborative healthcare and StarCraft Multi-Agent Challenge (SMAC) benchmarks, SeqComm-DFL achieves four to six times higher cumulative rewards and over 13\% win rate improv...
+**来源**：2604.08944v1
+**优先级**：medium
+
+### 🔴 Every Response Counts: Quantifying Uncertainty...
+
+**问题**：While Large Language Model-based Multi-Agent Systems (MAS) consistently outperform single-agent systems on complex tasks, their intricate interactions introduce critical reliabi...
+**来源**：2604.08708v1
+**优先级**：high
+
+### 🟡 Every Response Counts: Quantifying Uncertainty...
+
+**问题**：Specifically, these methods struggle with three distinct challenges: the cascading uncertainty in multi-step reasoning, the variability of inter-agent communication paths, and t...
+**来源**：2604.08708v1
+**优先级**：medium
+
+### 🔴 "Theater of Mind" for LLMs: A Cognitive Archite...
+
+**问题**：While effective for isolated tasks, this reactive paradigm presents a critical bottleneck for engineering autonomous artificial intelligence.
+**来源**：2604.08206v1
+**优先级**：high
+
+### 🟡 "Theater of Mind" for LLMs: A Cognitive Archite...
+
+**问题**：To address this structural limitation, we propose Global Workspace Agents (GWA), a cognitive architecture inspired by Global Workspace Theory.
+**来源**：2604.08206v1
+**优先级**：medium
+

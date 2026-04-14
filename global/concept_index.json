@@ -1,6 +1,979 @@
 {
-  "updated": "2026-04-14T10:05:41.955293",
+  "updated": "2026-04-13T14:05:50.611373",
   "concepts": [
+    {
+      "id": "system-ai-agent",
+      "name": "AI Agent",
+      "type": "system",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-towards-llms",
+      "name": "Towards LLMs",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "system-operating-systems",
+      "name": "Operating Systems",
+      "type": "system",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-charles-packer",
+      "name": "Charles Packer",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-sarah-wooders",
+      "name": "Sarah Wooders",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-kevin-lin",
+      "name": "Kevin Lin",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-vivian-fang",
+      "name": "Vivian Fang",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-shishir",
+      "name": "Shishir",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-patil",
+      "name": "Patil",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-ion-stoica",
+      "name": "Ion Stoica",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-joseph",
+      "name": "Joseph",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-gonzalez",
+      "name": "Gonzalez",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-main-context",
+      "name": "Main Context",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-external-context",
+      "name": "External Context",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "system-temporal-knowledge-graph-architecture",
+      "name": "Temporal Knowledge Graph Architecture",
+      "type": "system",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "system-agent-memory",
+      "name": "Agent Memory",
+      "type": "system",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-preston-rasmussen",
+      "name": "Preston Rasmussen",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "system-agent",
+      "name": "Agent",
+      "type": "system",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-mem0-team",
+      "name": "Mem0 Team",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-locomo",
+      "name": "LOCOMO",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "system-memory-centric-architecture",
+      "name": "Memory-Centric Architecture",
+      "type": "system",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-conversational",
+      "name": "Conversational",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-user-prefs",
+      "name": "User Prefs",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-entities",
+      "name": "Entities",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-xingchen-wan",
+      "name": "Xingchen Wan",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-daniel-pressman",
+      "name": "Daniel Pressman",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-bryan",
+      "name": "Bryan",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-papers",
+      "name": "Papers",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-code",
+      "name": "Code",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "ai-agent-memory",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-ai-agent-记忆系统深度研究报告-2026-04-07",
+      "name": "AI Agent 记忆系统深度研究报告 — 2026-04-07",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-核心论文解读",
+      "name": "📖 核心论文解读",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文1-memgpt-towards-llms-as-operating-systems",
+      "name": "论文1：MemGPT: Towards LLMs as Operating Systems",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文2-zep-a-temporal-knowledge-graph-architecture-for-agent-memory",
+      "name": "论文2：Zep: A Temporal Knowledge Graph Architecture for Agent Memory",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文3-meminsight-autonomous-memory-augmentation-for-llm-agents",
+      "name": "论文3：MemInsight: Autonomous Memory Augmentation for LLM Agents",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文4-omni-simplemem-autoresearch-guided-discovery-of-lifelong-multimodal-agent-memory",
+      "name": "论文4：Omni-SimpleMem: Autoresearch-Guided Discovery of Lifelong Multimodal Agent Memory",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文5-memfactory-unified-inference-training-framework-for-agent-memory",
+      "name": "论文5：MemFactory: Unified Inference & Training Framework for Agent Memory",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-综合分析",
+      "name": "🔍 综合分析",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-领域现状",
+      "name": "领域现状",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-趋势预测",
+      "name": "趋势预测",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-实践建议",
+      "name": "实践建议",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-参考文献",
+      "name": "📚 参考文献",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-memgpt",
+      "name": "MemGPT",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-研究问题",
+      "name": "📋 研究问题",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-核心论文-系统解读",
+      "name": "📖 核心论文/系统解读",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-系统-1-memgpt-将-llm-视为操作系统",
+      "name": "系统 1：MemGPT — 将 LLM 视为操作系统",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-系统-2-letta-memgpt-的进化形态",
+      "name": "系统 2：Letta — MemGPT 的进化形态",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-letta-agent-配置示例",
+      "name": "Letta Agent 配置示例",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-系统-3-langchain-memory-体系",
+      "name": "系统 3：LangChain Memory 体系",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-系统-4-redis-ai-agent-memory",
+      "name": "系统 4：Redis AI Agent Memory",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-记忆系统架构对比",
+      "name": "记忆系统架构对比",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-技术趋势分析",
+      "name": "技术趋势分析",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-核心挑战与解决方案",
+      "name": "核心挑战与解决方案",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-知识图谱更新",
+      "name": "📚 知识图谱更新",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-新增概念",
+      "name": "新增概念",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-关系网络",
+      "name": "关系网络",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-短期-6-12个月",
+      "name": "短期（6-12个月）",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-中期-1-2年",
+      "name": "中期（1-2年）",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-长期-2-5年",
+      "name": "长期（2-5年）",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-研究建议",
+      "name": "💡 研究建议",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-ai-agent-记忆系统-深度研究报告-2026-04-03-第2次研究",
+      "name": "AI Agent 记忆系统 深度研究报告 — 2026-04-03（第2次研究）",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-核心论文-系统深度解读",
+      "name": "📖 核心论文/系统深度解读",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文-1-mem0-可扩展生产级-agent-记忆系统",
+      "name": "论文 1：Mem0 — 可扩展生产级 Agent 记忆系统",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文-2-memgen-生成式潜在记忆",
+      "name": "论文 2：MemGen — 生成式潜在记忆",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文-3-continuum-memory-architecture-cma-连续记忆架构",
+      "name": "论文 3：Continuum Memory Architecture (CMA) — 连续记忆架构",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文-4-preference-aware-memory-update-pamu",
+      "name": "论文 4：Preference-Aware Memory Update (PAMU)",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文-5-multi-agent-memory-计算机架构视角",
+      "name": "论文 5：Multi-Agent Memory — 计算机架构视角",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文-6-evaluating-memory-structure-in-llm-agents-structmemeval",
+      "name": "论文 6：Evaluating Memory Structure in LLM Agents (StructMemEval)",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文-7-gam-rag-增益自适应记忆-rag",
+      "name": "论文 7：GAM-RAG — 增益自适应记忆 RAG",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文-8-hierarchical-memory-tree-hmt-web-agent-分层记忆树",
+      "name": "论文 8：Hierarchical Memory Tree (HMT) — Web Agent 分层记忆树",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文-9-infrastructure-for-tradable-agent-memory",
+      "name": "论文 9：Infrastructure for Tradable Agent Memory",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文-10-emembench-情景记忆评估基准",
+      "name": "论文 10：EMemBench — 情景记忆评估基准",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-领域现状-2026年记忆系统格局",
+      "name": "领域现状：2026年记忆系统格局",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-核心技术趋势",
+      "name": "核心技术趋势",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-新增知识图谱概念",
+      "name": "新增知识图谱概念",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-知识缺口更新-相比上次研究新增",
+      "name": "🔴 知识缺口更新（相比上次研究新增）",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-已验证-部分解决的缺口",
+      "name": "已验证/部分解决的缺口",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-新增高优先级缺口",
+      "name": "新增高优先级缺口",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-mem0",
+      "name": "Mem0",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "method-memory",
+      "name": "Memory",
+      "type": "method",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文-2-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory",
+      "name": "论文 2：Mem0 — Building Production-Ready AI Agents with Scalable Long-Term Memory",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文-4-himem-hierarchical-long-term-memory-for-llm-long-horizon-agents",
+      "name": "论文 4：HiMem — Hierarchical Long-Term Memory for LLM Long-Horizon Agents",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文-5-gaama-graph-augmented-associative-memory-for-agents",
+      "name": "论文 5：GAAMA — Graph Augmented Associative Memory for Agents",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-主流技术方向对比",
+      "name": "主流技术方向对比",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-关键研究缺口",
+      "name": "关键研究缺口",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-核心论文",
+      "name": "核心论文",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-相关资源",
+      "name": "相关资源",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-2026年最新研究",
+      "name": "2026年最新研究",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-论文-1-待搜索填充",
+      "name": "论文 1：[待搜索填充]",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "concept-知识缺口",
+      "name": "知识缺口",
+      "type": "concept",
+      "topics": [
+        "agent-token优化",
+        "多智能体协作系统"
+      ],
+      "is_shared": true
+    },
+    {
+      "id": "topic-agent-token优化",
+      "name": "Agent Token优化 研究主题",
+      "type": "system",
+      "topics": [
+        "agent-token优化"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-token-optimization",
+      "name": "token optimization",
+      "type": "concept",
+      "topics": [
+        "agent-token优化"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-llm-context-compression",
+      "name": "LLM context compression",
+      "type": "concept",
+      "topics": [
+        "agent-token优化"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-prompt-compression",
+      "name": "prompt compression",
+      "type": "concept",
+      "topics": [
+        "agent-token优化"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-context-window-management",
+      "name": "context window management",
+      "type": "concept",
+      "topics": [
+        "agent-token优化"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-harness-agent-efficiency",
+      "name": "harness agent efficiency",
+      "type": "concept",
+      "topics": [
+        "agent-token优化"
+      ],
+      "is_shared": false
+    },
     {
       "id": "mem0",
       "name": "Mem0",
@@ -250,6 +1223,1428 @@
       "type": "concept",
       "topics": [
         "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-ai-agent-2026-04-07",
+      "name": "AI Agent 记忆系统深度研究报告 — 2026-04-07",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item",
+      "name": "📖 核心论文解读",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-1-memgpt-towards-llms-as-operating-systems",
+      "name": "论文1：MemGPT: Towards LLMs as Operating Systems",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-2-zep-a-temporal-knowledge-graph-architecture-for-agent-memory",
+      "name": "论文2：Zep: A Temporal Knowledge Graph Architecture for Agent Memory",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-3-meminsight-autonomous-memory-augmentation-for-llm-agents",
+      "name": "论文3：MemInsight: Autonomous Memory Augmentation for LLM Agents",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-4-omni-simplemem-autoresearch-guided-discovery-of-lifelong-multimodal-agent-memory",
+      "name": "论文4：Omni-SimpleMem: Autoresearch-Guided Discovery of Lifelong Multimodal Agent Memory",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-5-memfactory-unified-inference-training-framework-for-agent-memory",
+      "name": "论文5：MemFactory: Unified Inference & Training Framework for Agent Memory",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-2",
+      "name": "🔍 综合分析",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-3",
+      "name": "领域现状",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-4",
+      "name": "趋势预测",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-5",
+      "name": "实践建议",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-6",
+      "name": "📚 参考文献",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-ai-agent-2026-04-03",
+      "name": "AI Agent 记忆系统 深度研究报告 — 2026-04-03",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-7",
+      "name": "📋 研究问题",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-8",
+      "name": "📖 核心论文/系统解读",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-1-memgpt-llm",
+      "name": "系统 1：MemGPT — 将 LLM 视为操作系统",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-2-letta-memgpt",
+      "name": "系统 2：Letta — MemGPT 的进化形态",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-letta-agent",
+      "name": "Letta Agent 配置示例",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-3-langchain-memory",
+      "name": "系统 3：LangChain Memory 体系",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-4-redis-ai-agent-memory",
+      "name": "系统 4：Redis AI Agent Memory",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-9",
+      "name": "记忆系统架构对比",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-10",
+      "name": "技术趋势分析",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-11",
+      "name": "核心挑战与解决方案",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-12",
+      "name": "📚 知识图谱更新",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-13",
+      "name": "新增概念",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-14",
+      "name": "关系网络",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-6-12",
+      "name": "短期（6-12个月）",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-1-2",
+      "name": "中期（1-2年）",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-2-5",
+      "name": "长期（2-5年）",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-15",
+      "name": "💡 研究建议",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-ai-agent-2026-04-03-2",
+      "name": "AI Agent 记忆系统 深度研究报告 — 2026-04-03（第2次研究）",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-16",
+      "name": "📖 核心论文/系统深度解读",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-1-mem0-agent",
+      "name": "论文 1：Mem0 — 可扩展生产级 Agent 记忆系统",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-2-memgen",
+      "name": "论文 2：MemGen — 生成式潜在记忆",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-3-continuum-memory-architecture-cma",
+      "name": "论文 3：Continuum Memory Architecture (CMA) — 连续记忆架构",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-4-preference-aware-memory-update-pamu",
+      "name": "论文 4：Preference-Aware Memory Update (PAMU)",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-5-multi-agent-memory",
+      "name": "论文 5：Multi-Agent Memory — 计算机架构视角",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-6-evaluating-memory-structure-in-llm-agents-structmemeval",
+      "name": "论文 6：Evaluating Memory Structure in LLM Agents (StructMemEval)",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-7-gam-rag-rag",
+      "name": "论文 7：GAM-RAG — 增益自适应记忆 RAG",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-8-hierarchical-memory-tree-hmt-web-agent",
+      "name": "论文 8：Hierarchical Memory Tree (HMT) — Web Agent 分层记忆树",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-9-infrastructure-for-tradable-agent-memory",
+      "name": "论文 9：Infrastructure for Tradable Agent Memory",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-10-emembench",
+      "name": "论文 10：EMemBench — 情景记忆评估基准",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-2026",
+      "name": "领域现状：2026年记忆系统格局",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-17",
+      "name": "核心技术趋势",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-18",
+      "name": "新增知识图谱概念",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-19",
+      "name": "🔴 知识缺口更新（相比上次研究新增）",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-20",
+      "name": "已验证/部分解决的缺口",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-21",
+      "name": "新增高优先级缺口",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-2-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory",
+      "name": "论文 2：Mem0 — Building Production-Ready AI Agents with Scalable Long-Term Memory",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-3-zep-a-temporal-knowledge-graph-architecture-for-agent-memory",
+      "name": "论文 3：Zep — A Temporal Knowledge Graph Architecture for Agent Memory",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-4-himem-hierarchical-long-term-memory-for-llm-long-horizon-agents",
+      "name": "论文 4：HiMem — Hierarchical Long-Term Memory for LLM Long-Horizon Agents",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-5-gaama-graph-augmented-associative-memory-for-agents",
+      "name": "论文 5：GAAMA — Graph Augmented Associative Memory for Agents",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-22",
+      "name": "主流技术方向对比",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-23",
+      "name": "关键研究缺口",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-24",
+      "name": "核心论文",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-25",
+      "name": "相关资源",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-2026-2",
+      "name": "2026年最新研究",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-ai-agent",
+      "name": "AI Agent 深度研究日报",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-26",
+      "name": "📊 核心发现",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-1-ai-agent-2025",
+      "name": "1. AI Agent 记忆架构（2025分水岭）",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-2-agentic-rag",
+      "name": "2. Agentic RAG 趋势",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-3-token",
+      "name": "3. Token 优化技术",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-4",
+      "name": "4. 多智能体协作框架",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-27",
+      "name": "🔬 技术洞察",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-28",
+      "name": "记忆系统演进",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-token",
+      "name": "Token优化策略",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-29",
+      "name": "📈 行业趋势",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-30",
+      "name": "🎯 下一步研究",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-1",
+      "name": "论文 1：[待搜索填充]",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-31",
+      "name": "知识缺口",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-ai-agent-2",
+      "name": "AI Agent 记忆系统深度对比分析",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-32",
+      "name": "🎯 核心问题",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-33",
+      "name": "📊 记忆系统对比",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-1-memgpt",
+      "name": "1. MemGPT (伯克利大学)",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-2-mem0",
+      "name": "2. Mem0 (开源)",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-3-zep",
+      "name": "3. Zep (上下文工程平台)",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-4-openmemory-mcp-2025-5",
+      "name": "4. OpenMemory MCP (2025年5月)",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-34",
+      "name": "📈 技术对比矩阵",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-35",
+      "name": "🔬 核心机制解析",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-36",
+      "name": "记忆分层策略",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-37",
+      "name": "记忆失效机制",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-38",
+      "name": "选择指南",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-39",
+      "name": "记忆优化实践",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-40",
+      "name": "示例：分层记忆管理",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-41",
+      "name": "🔮 未来趋势",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "system-layeredmemory",
+      "name": "LayeredMemory",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "method-init",
+      "name": "__init__",
+      "type": "method",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "method-add",
+      "name": "add",
+      "type": "method",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "method-recall",
+      "name": "recall",
+      "type": "method",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-ai-agent-3",
+      "name": "AI Agent 记忆系统 演化闭环报告",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-query-time",
+      "name": "Query-time 投影",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-42",
+      "name": "图谱报告",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-ai-agent-4",
+      "name": "AI Agent 记忆系统 图谱报告",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-god-nodes",
+      "name": "God Nodes",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-communities",
+      "name": "Communities",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-surprising-connections",
+      "name": "Surprising Connections",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-43",
+      "name": "自学习回写",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-query",
+      "name": "Query",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-communitysummary",
+      "name": "CommunitySummary",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-lesson",
+      "name": "Lesson",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-pattern",
+      "name": "Pattern",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-summary",
+      "name": "Summary",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-ai-age",
+      "name": "AI Age",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-reflection",
+      "name": "REFLECTION",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-context",
+      "name": "CONTEXT",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-extracted",
+      "name": "EXTRACTED",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-true",
+      "name": "True",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "system-agentic-rag",
+      "name": "Agentic RAG",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-token-2",
+      "name": "Token",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-context-engineering",
+      "name": "Context Engineering",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-prompt-engineering",
+      "name": "Prompt Engineering",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-csdn",
+      "name": "CSDN",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-fdgfgfdgfd",
+      "name": "FDGFGFDGFD",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-github",
+      "name": "GitHub",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-autogen",
+      "name": "AutoGen",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-microsoft",
+      "name": "Microsoft",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-swarms",
+      "name": "Swarms",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-chatdev",
+      "name": "ChatDev",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-openbmb",
+      "name": "OpenBMB",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "system-model-context-protocol",
+      "name": "Model Context Protocol",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-44",
+      "name": "如何管理",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-cache",
+      "name": "Cache",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-disk",
+      "name": "Disk",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-cpu-cache",
+      "name": "CPU Cache",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-stars",
+      "name": "Stars",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-engineering",
+      "name": "Engineering",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-uc-berkeley",
+      "name": "UC Berkeley",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "system-stateful-agent",
+      "name": "Stateful Agent",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-letta-ai",
+      "name": "Letta AI",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-langchain-ai",
+      "name": "LangChain AI",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "method-conversationbuffermemory",
+      "name": "ConversationBufferMemory",
+      "type": "method",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "method-conversationsummarymemory",
+      "name": "ConversationSummaryMemory",
+      "type": "method",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "method-vectorstoreretrievermemory",
+      "name": "VectorStoreRetrieverMemory",
+      "type": "method",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "method-conversationkgmemory",
+      "name": "ConversationKGMemory",
+      "type": "method",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-redis",
+      "name": "Redis",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-persistent-storage",
+      "name": "Persistent Storage",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-45",
+      "name": "执行摘要",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-46",
+      "name": "搜索与分析",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-diagnosing-retrieval-vs-utilization-bottlenecks-in-llm-agent-memory",
+      "name": "Diagnosing Retrieval vs. Utilization Bottlenecks in LLM Agent Memory",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-47",
+      "name": "方法论与缺口",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-48",
+      "name": "研究方法论学习记录",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-2026-04-02",
+      "name": "2026-04-02 首次部署",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-49",
+      "name": "研究流程设计",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-50",
+      "name": "核心原则",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-oh-my-opencode-agent",
+      "name": "Oh My OpenCode Agent 分工",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-2026-04-03",
+      "name": "2026-04-03 研究方法论更新",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-agent",
+      "name": "多 Agent 并行采集策略",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-51",
+      "name": "研究质量控制",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-item-52",
+      "name": "知识图谱维护",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "method-diagnosing-retrieval",
+      "name": "Diagnosing Retrieval",
+      "type": "method",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-utilization-bottlenecks",
+      "name": "Utilization Bottlenecks",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "system-llm-agent-memory",
+      "name": "LLM Agent Memory",
+      "type": "system",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-claim",
+      "name": "Claim",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-图谱指标",
+      "name": "图谱指标",
+      "type": "concept",
+      "topics": [
+        "ai-agent-memory"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "topic-多智能体协作系统",
+      "name": "多智能体协作系统 研究主题",
+      "type": "system",
+      "topics": [
+        "多智能体协作系统"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-multi-agent-coordination",
+      "name": "multi-agent coordination",
+      "type": "concept",
+      "topics": [
+        "多智能体协作系统"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-agent-communication",
+      "name": "agent communication",
+      "type": "concept",
+      "topics": [
+        "多智能体协作系统"
+      ],
+      "is_shared": false
+    },
+    {
+      "id": "concept-swarm-intelligence",
+      "name": "swarm intelligence",
+      "type": "concept",
+      "topics": [
+        "多智能体协作系统"
       ],
       "is_shared": false
     }

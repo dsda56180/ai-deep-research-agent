@@ -14,3 +14,8 @@ LESSON: 使用更精确的组合关键词，如 "agent memory architecture LLM"
 CONTEXT: 知识图谱更新
 REFLECTION: 忘记检测矛盾关系，导致新发现与旧知识冲突未发现
 LESSON: 每次添加新概念时必须检查与已有知识的矛盾
+## 2026-04-08
+CONTEXT: AI Agent 记忆系统 evolution cycle 2026-04-08
+REFLECTION: 图谱校验失败
+LESSON: AI Agent 记忆系统 在 evolution 闭环里必须先 refresh_views 再生成 report，并处理无效关系
+

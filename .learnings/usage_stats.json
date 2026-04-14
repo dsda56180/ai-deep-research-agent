@@ -2,15 +2,41 @@
   "patterns": {
     "使用精确组合关键词": 3,
     "抓取论文全文分析": 3,
-    "检查知识矛盾": 2
+    "检查知识矛盾": 2,
+    "ai agent 记忆系统 先对真实报告执行 ingest，再 refresh_views，再用 p": 4,
+    "多智能体协作系统 先对真实报告执行 ingest，再 refresh_views，再用 projec": 3,
+    "agent token优化 先对真实报告执行 ingest，再 refresh_views，再用 p": 1
   },
   "corrections": {
     "必须抓取全文": 3,
     "使用精确关键词": 3,
-    "检查矛盾关系": 1
+    "检查矛盾关系": 1,
+    "ai agent 记忆系统 在 evolution 闭环里必须先 refresh_views 再生成": 1
   },
   "last_promoted": {
     "使用精确组合关键词": "2026-04-07T10:57:00",
-    "抓取论文全文分析": "2026-04-07T10:57:00"
+    "抓取论文全文分析": "2026-04-07T10:57:00",
+    "ai agent 记忆系统 先对真实报告执行 ingest，再 refresh_views，再用 p": "2026-04-09T18:08:29.820789",
+    "多智能体协作系统 先对真实报告执行 ingest，再 refresh_views，再用 projec": "2026-04-13T14:05:49.226858"
+  },
+  "signal_meta": {
+    "ai agent 记忆系统 先对真实报告执行 ingest，再 refresh_views，再用 p": {
+      "created_at": "2026-04-09T09:37:42.372177",
+      "last_seen": "2026-04-13T13:27:47.952212",
+      "bucket": "patterns",
+      "raw_count": 4
+    },
+    "多智能体协作系统 先对真实报告执行 ingest，再 refresh_views，再用 projec": {
+      "created_at": "2026-04-13T13:27:42.742244",
+      "last_seen": "2026-04-13T14:05:49.011253",
+      "bucket": "patterns",
+      "raw_count": 3
+    },
+    "agent token优化 先对真实报告执行 ingest，再 refresh_views，再用 p": {
+      "created_at": "2026-04-13T13:27:55.994475",
+      "last_seen": "2026-04-13T13:27:55.994475",
+      "bucket": "patterns",
+      "raw_count": 1
+    }
   }
 }
