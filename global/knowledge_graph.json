@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-13T14:05:50.606838",
+  "updated": "2026-04-15T13:13:27.520767",
   "topics": [
     {
       "id": "agent-token优化",
@@ -9,7 +9,7 @@
       "paper_count": 0,
       "entity_count": 111,
       "community_count": 25,
-      "last_updated": "2026-04-13T14:05:50.491419"
+      "last_updated": "2026-04-15T13:13:27.415990"
     },
     {
       "id": "ai-agent-memory",
@@ -19,7 +19,7 @@
       "paper_count": 0,
       "entity_count": 242,
       "community_count": 4,
-      "last_updated": "2026-04-13T14:05:50.566111"
+      "last_updated": "2026-04-15T13:13:27.484642"
     },
     {
       "id": "多智能体协作系统",
@@ -29,7 +29,7 @@
       "paper_count": 0,
       "entity_count": 110,
       "community_count": 26,
-      "last_updated": "2026-04-13T14:05:50.604783"
+      "last_updated": "2026-04-15T13:13:27.519767"
     }
   ],
   "global_concepts": [
@@ -2676,7 +2676,7 @@
         "INFERRED": 86
       },
       "avg_weighted_degree": 1.99,
-      "updated": "2026-04-13T14:05:50.491419"
+      "updated": "2026-04-15T13:13:27.415990"
     },
     "ai-agent-memory": {
       "topic": "AI Agent 记忆系统",
@@ -2706,7 +2706,7 @@
         "INFERRED": 493
       },
       "avg_weighted_degree": 3.1,
-      "updated": "2026-04-13T14:05:50.566111"
+      "updated": "2026-04-15T13:13:27.484642"
     },
     "多智能体协作系统": {
       "topic": "多智能体协作系统",
@@ -2735,7 +2735,7 @@
         "INFERRED": 86
       },
       "avg_weighted_degree": 1.95,
-      "updated": "2026-04-13T14:05:50.604783"
+      "updated": "2026-04-15T13:13:27.519767"
     }
   }
 }
