@@ -1,12 +1,14 @@
 # ai-agent-memory - 研究报告索引
 
-**最后更新**: 2026-04-16 10:54
+**最后更新**: 2026-04-23 16:43
 
-**报告总数**: 19
+**报告总数**: 20
 
 ---
 
 ## 📚 报告列表（最新在前）
+
+- [ai-agent-memory_Research_2026-04-23](reports/ai-agent-memory_Research_2026-04-23.md) - 2026-04-23
 
 - [ai-agent-memory_Research_2026-04-16](reports/ai-agent-memory_Research_2026-04-16.md) - 2026-04-16
 - [ai-agent-memory_Research_2026-04-15](reports/ai-agent-memory_Research_2026-04-15.md) - 2026-04-15
